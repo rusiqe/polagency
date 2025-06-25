@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils import timezone
+from markdownx.admin import MarkdownxModelAdmin
 from .models import BlogCategory, BlogPost, BlogComment, BlogTag, InstagramFeed, Newsletter
 
 @admin.register(BlogCategory)
@@ -19,7 +20,7 @@ class BlogCategoryAdmin(admin.ModelAdmin):
     color_preview.short_description = 'Color'
 
 @admin.register(BlogPost)
-class BlogPostAdmin(admin.ModelAdmin):
+class BlogPostAdmin(MarkdownxModelAdmin):
     list_display = ['title', 'author', 'category', 'post_type', 'status', 'is_featured', 'published_at', 'view_count']
     list_filter = ['status', 'post_type', 'category', 'is_featured', 'created_at', 'author']
     search_fields = ['title', 'content', 'excerpt']

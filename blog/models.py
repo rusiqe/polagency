@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.urls import reverse
+from markdownx.models import MarkdownxField
+from markdownx.utils import markdownify
 
 class BlogCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -47,7 +49,7 @@ class BlogPost(models.Model):
     
     # Content fields
     excerpt = models.TextField(max_length=300, help_text="Brief description for previews")
-    content = models.TextField()
+    content = MarkdownxField(help_text="Write your post content in Markdown format")
     featured_image = models.ImageField(upload_to='blog/images/', blank=True)
     
     # Instagram integration fields
@@ -81,6 +83,17 @@ class BlogPost(models.Model):
     
     def get_absolute_url(self):
         return reverse('blog:post_detail', kwargs={'slug': self.slug})
+    
+    @property
+    def formatted_content(self):
+        """Convert markdown content to HTML"""
+        return markdownify(self.content)
+    
+    @property
+    def read_time(self):
+        """Estimate reading time based on content length"""
+        word_count = len(self.content.split())
+        return max(1, round(word_count / 200))  # Average reading speed 200 words/minute
     
     def __str__(self):
         return self.title

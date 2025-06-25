@@ -26,6 +26,7 @@ urlpatterns = [
     path('support/', include('support.urls')),
     path('services/', include('services.urls')),
     path('blog/', include('blog.urls')),
+    path('markdownx/', include('markdownx.urls')),
 ]
 
 if settings.DEBUG:
