@@ -1,0 +1,401 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ homepage.hero_title }} - Poland Study Agency{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1 class="hero-title">{{ homepage.hero_title }}</h1>
+                <p class="hero-subtitle">{{ homepage.hero_subtitle }}</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'services:packages' %}" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>
+                        Get Started
+                    </a>
+                    <a href="{% url 'universities:university_list' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-university me-2"></i>
+                        Explore Universities
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                {% if homepage.hero_image %}
+                    <img src="{{ homepage.hero_image.url }}" alt="Study in Poland" class="img-fluid rounded-3 shadow-lg">
+                {% else %}
+                    <div class="hero-placeholder bg-white bg-opacity-10 rounded-3 p-5">
+                        <i class="fas fa-graduation-cap fa-5x mb-3"></i>
+                        <h3>Your Journey Starts Here</h3>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <span class="stat-number">{{ university_stats.total_universities }}+</span>
+                    <div class="stat-label">Universities</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <span class="stat-number">{{ homepage.students_helped }}+</span>
+                    <div class="stat-label">Students Helped</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <span class="stat-number">{{ homepage.success_rate }}%</span>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <span class="stat-number">{{ homepage.countries_served }}+</span>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">{{ homepage.services_title }}</h2>
+                <p class="section-subtitle">{{ homepage.services_subtitle }}</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>University Search</h4>
+                    <p>Find the perfect university and program that matches your academic goals and preferences from our comprehensive database.</p>
+                    <a href="{% url 'universities:university_list' %}" class="btn btn-outline-primary">Explore Universities</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Complete Support</h4>
+                    <p>From application to integration, we provide end-to-end support including visa assistance, accommodation, and arrival services.</p>
+                    <a href="{% url 'services:packages' %}" class="btn btn-outline-primary">View Services</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Get instant help with our AI-powered chatbot and connect with our expert consultants whenever you need assistance.</p>
+                    <a href="{% url 'support:chatbot' %}" class="btn btn-outline-primary">Get Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Service Packages -->
+{% if featured_packages %}
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Our Service Packages</h2>
+                <p class="section-subtitle">Choose the perfect package for your study abroad journey</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for package in featured_packages %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card {% if package.is_featured %}featured{% endif %}">
+                    {% if package.is_featured %}
+                    <div class="position-absolute top-0 start-50 translate-middle">
+                        <span class="badge bg-warning text-dark px-3 py-2">Most Popular</span>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="package-header">
+                        <h4>{{ package.name }}</h4>
+                        <div class="package-price">${{ package.price_usd }}</div>
+                        <p class="mb-0">{{ package.description|truncatewords:15 }}</p>
+                    </div>
+                    
+                    <div class="card-body">
+                        <a href="{% url 'services:package_detail' package.id %}" class="btn btn-primary w-100">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'services:packages' %}" class="btn btn-outline-primary btn-lg">
+                View All Packages
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- About Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>{{ homepage.about_title }}</h2>
+                <p class="lead">{{ homepage.about_content|truncatewords:50 }}</p>
+                
+                <div class="row g-3 mt-4">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h6 class="mb-0">Quality Education</h6>
+                                <small class="text-muted">Top-ranked universities</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-euro-sign text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h6 class="mb-0">Affordable Costs</h6>
+                                <small class="text-muted">Budget-friendly tuition</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-globe text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h6 class="mb-0">EU Membership</h6>
+                                <small class="text-muted">Study in the EU</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-heart text-primary me-3 fa-2x"></i>
+                            <div>
+                                <h6 class="mb-0">Rich Culture</h6>
+                                <small class="text-muted">Historic and vibrant</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="{% url 'core:about' %}" class="btn btn-primary">Learn More About Us</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                {% if homepage.about_image %}
+                    <img src="{{ homepage.about_image.url }}" alt="About Poland Study Agency" class="img-fluid rounded-3 shadow">
+                {% else %}
+                    <div class="bg-light rounded-3 p-5 text-center">
+                        <i class="fas fa-map-marked-alt fa-5x text-primary mb-3"></i>
+                        <h4>Discover Poland</h4>
+                        <p class="text-muted">Your gateway to European education</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+{% if testimonials %}
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle">Real experiences from students who achieved their dreams</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for testimonial in testimonials %}
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "{{ testimonial.testimonial_text|truncatewords:25 }}"
+                    </div>
+                    
+                    <div class="testimonial-author">
+                        {% if testimonial.photo %}
+                            <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="testimonial-avatar">
+                        {% else %}
+                            <div class="testimonial-avatar bg-primary d-flex align-items-center justify-content-center text-white">
+                                {{ testimonial.name|first }}
+                            </div>
+                        {% endif %}
+                        
+                        <div class="testimonial-info">
+                            <h6>{{ testimonial.name }}</h6>
+                            <small>{{ testimonial.university }}</small>
+                            <div class="text-warning">
+                                {% for i in "12345"|make_list %}
+                                    {% if forloop.counter <= testimonial.rating %}
+                                        <i class="fas fa-star"></i>
+                                    {% else %}
+                                        <i class="far fa-star"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'services:testimonials' %}" class="btn btn-outline-primary">
+                Read More Testimonials
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Recent Blog Posts -->
+{% if recent_posts %}
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Latest from Our Blog</h2>
+                <p class="section-subtitle">Stay updated with the latest news and insights about studying in Poland</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for post in recent_posts %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card blog-card h-100">
+                    {% if post.featured_image %}
+                        <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}">
+                    {% endif %}
+                    
+                    <div class="card-body d-flex flex-column">
+                        {% if post.category %}
+                            <span class="blog-category mb-2">{{ post.category.name }}</span>
+                        {% endif %}
+                        
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.excerpt|truncatewords:20 }}</p>
+                        
+                        <div class="mt-auto">
+                            <div class="blog-meta mb-3">
+                                <small>
+                                    <i class="fas fa-user me-1"></i> {{ post.author.get_full_name|default:post.author.username }}
+                                    <i class="fas fa-calendar ms-3 me-1"></i> {{ post.published_at|date:"M d, Y" }}
+                                </small>
+                            </div>
+                            
+                            <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-outline-primary">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'blog:home' %}" class="btn btn-outline-primary">
+                Visit Our Blog
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Instagram Feed -->
+{% if instagram_posts %}
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Follow Our Journey</h2>
+                <p class="section-subtitle">See what's happening on our Instagram</p>
+            </div>
+        </div>
+        
+        <div class="row g-3">
+            {% for post in instagram_posts %}
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <img src="{{ post.get_display_image }}" class="card-img-top" alt="Instagram post">
+                    <div class="card-body p-3">
+                        <p class="card-text small">{{ post.get_display_caption|truncatewords:10 }}</p>
+                        {% if post.permalink %}
+                            <a href="{{ post.permalink }}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-instagram me-1"></i> View on Instagram
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'blog:instagram_feed' %}" class="btn btn-outline-primary">
+                View More Posts
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center hero-content">
+                <h2 class="hero-title">{{ homepage.cta_title }}</h2>
+                <p class="hero-subtitle">{{ homepage.cta_subtitle }}</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'services:packages' %}" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>
+                        {{ homepage.cta_button_text }}
+                    </a>
+                    <a href="{% url 'support:chatbot' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-comments me-2"></i>
+                        Chat with Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

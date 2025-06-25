@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Support Chat - Poland Study Agency{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-robot me-2"></i>
+                        Support Chat
+                    </h4>
+                    <small>Get instant help with our AI-powered assistant</small>
+                </div>
+                
+                <div class="card-body p-0">
+                    <div id="chat-messages" style="height: 500px; overflow-y: auto; padding: 1rem;">
+                        <div class="text-center text-muted">
+                            <i class="fas fa-comments fa-3x mb-3"></i>
+                            <p>Welcome! Click "Start Chat" to begin a conversation with our support bot.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="chat-input" placeholder="Type your message..." disabled>
+                        <button class="btn btn-primary" id="send-message" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <button class="btn btn-success" id="start-chat">
+                            <i class="fas fa-play me-1"></i>
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h5>Frequently Asked Questions</h5>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How do I apply to Polish universities?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our consulting service includes complete application assistance. We help you choose universities, prepare documents, and submit applications on your behalf.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                What documents do I need for a student visa?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Typical documents include passport, acceptance letter, financial proof, health insurance, and academic transcripts. Our visa assistance service covers all requirements.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                How much does it cost to study in Poland?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Tuition fees vary by university and program. Public universities are generally more affordable, while private universities offer more English programs. Living costs are also quite reasonable compared to other EU countries.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let chatSession = null;
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const sendButton = document.getElementById('send-message');
+    const startButton = document.getElementById('start-chat');
+    
+    // Start chat session
+    startButton.addEventListener('click', function() {
+        startChatSession();
+    });
+    
+    // Send message on button click
+    sendButton.addEventListener('click', sendMessage);
+    
+    // Send message on Enter key
+    chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+    
+    function startChatSession() {
+        fetch('/support/api/chat/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                action: 'start_session'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            chatSession = data.session_id;
+            chatMessages.innerHTML = '';
+            addMessageToChat('bot', data.message.content);
+            
+            // Enable input and send button
+            chatInput.disabled = false;
+            sendButton.disabled = false;
+            startButton.style.display = 'none';
+            chatInput.focus();
+        })
+        .catch(error => {
+            console.error('Error starting chat session:', error);
+            addMessageToChat('system', 'Sorry, there was an error starting the chat. Please try again.');
+        });
+    }
+    
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        
+        if (!message || !chatSession) return;
+        
+        // Add user message to chat
+        addMessageToChat('user', message);
+        chatInput.value = '';
+        
+        // Send to server
+        fetch('/support/api/chat/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                action: 'send_message',
+                session_id: chatSession,
+                message: message
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            addMessageToChat('bot', data.message.content);
+        })
+        .catch(error => {
+            console.error('Error sending message:', error);
+            addMessageToChat('system', 'Sorry, there was an error sending your message. Please try again.');
+        });
+    }
+    
+    function addMessageToChat(type, content) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${type} mb-3`;
+        
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.className = 'message-bubble';
+        bubbleDiv.textContent = content;
+        
+        messageDiv.appendChild(bubbleDiv);
+        chatMessages.appendChild(messageDiv);
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+});
+</script>
+{% endblock %}
+

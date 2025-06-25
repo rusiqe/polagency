@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - Poland Study Agency{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center hero-content">
+                <h1 class="hero-title">Our Service Packages</h1>
+                <p class="hero-subtitle">Complete support for your study abroad journey to Poland</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Packages -->
+<section class="section-padding">
+    <div class="container">
+        {% if packages %}
+        <div class="row g-4">
+            {% for package in packages %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100 {% if package.is_featured %}featured{% endif %}">
+                    {% if package.is_featured %}
+                    <div class="position-absolute top-0 start-50 translate-middle">
+                        <span class="badge bg-warning text-dark px-3 py-2">Most Popular</span>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="package-header">
+                        <h4>{{ package.name }}</h4>
+                        <div class="package-price">${{ package.price_usd }}</div>
+                        <p class="mb-0">{{ package.description|truncatewords:15 }}</p>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> University Application Assistance</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Document Preparation</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Visa Process Support</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Interview Preparation</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Airport Arrival Assistance</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Accommodation Setup</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Integration Support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-body mt-auto">
+                        <a href="{% url 'services:package_detail' package.id %}" class="btn btn-primary w-100 mb-2">
+                            Learn More
+                        </a>
+                        <a href="{% url 'services:purchase' package.id %}" class="btn btn-outline-primary w-100">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Default Package Display -->
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+                    <div class="package-header">
+                        <h4>Complete Support Package</h4>
+                        <div class="package-price">$500</div>
+                        <p class="mb-0">Full service support from application to integration</p>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> Personal agent for university applications</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Direct communication with admissions officers</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Complete document folder preparation</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Interview preparation and coaching</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Visa process assistance</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Airport arrival and pickup</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Hostel/accommodation initiation</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Integration into Polish society</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-body mt-auto">
+                        <a href="{% url 'support:contact' %}" class="btn btn-primary w-100 mb-2">
+                            Learn More
+                        </a>
+                        <a href="{% url 'support:contact' %}" class="btn btn-outline-primary w-100">
+                            Purchase Now - $500
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100">
+                    <div class="package-header">
+                        <h4>Basic Support Package</h4>
+                        <div class="package-price">$250</div>
+                        <p class="mb-0">Essential support for independent students</p>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> University selection guidance</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Application document review</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Visa requirements checklist</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Basic interview tips</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Accommodation recommendations</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Pre-arrival information package</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-body mt-auto">
+                        <a href="{% url 'support:contact' %}" class="btn btn-primary w-100 mb-2">
+                            Learn More
+                        </a>
+                        <a href="{% url 'support:contact' %}" class="btn btn-outline-primary w-100">
+                            Purchase Now - $250
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card package-card h-100 featured">
+                    <div class="position-absolute top-0 start-50 translate-middle">
+                        <span class="badge bg-warning text-dark px-3 py-2">Most Popular</span>
+                    </div>
+                    
+                    <div class="package-header">
+                        <h4>Premium Support Package</h4>
+                        <div class="package-price">$750</div>
+                        <p class="mb-0">VIP service with priority support</p>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> All Complete Package features</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Priority application processing</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Multiple university applications</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Scholarship application assistance</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 24/7 support hotline</li>
+                            <li><i class="fas fa-check text-success me-2"></i> First month accommodation included</li>
+                            <li><i class="fas fa-check text-success me-2"></i> City orientation tour</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 6-month follow-up support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-body mt-auto">
+                        <a href="{% url 'support:contact' %}" class="btn btn-primary w-100 mb-2">
+                            Learn More
+                        </a>
+                        <a href="{% url 'support:contact' %}" class="btn btn-outline-primary w-100">
+                            Purchase Now - $750
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Why Choose Our Services?</h2>
+                <p class="section-subtitle">We provide comprehensive support that goes beyond just application assistance</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h5>Personal Agent</h5>
+                    <p>Dedicated agent who personally handles your applications and communicates with universities on your behalf.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5>Direct University Contact</h5>
+                    <p>We maintain direct relationships with admissions officers and program coordinators at Polish universities.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h5>Arrival Support</h5>
+                    <p>Airport pickup, accommodation setup, and help with initial integration into Polish society.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5>95% Success Rate</h5>
+                    <p>Our proven track record shows that 95% of our clients successfully get admitted to their preferred universities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+{% if testimonials %}
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real experiences from students who achieved their dreams</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for testimonial in testimonials %}
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "{{ testimonial.testimonial_text|truncatewords:25 }}"
+                    </div>
+                    
+                    <div class="testimonial-author">
+                        {% if testimonial.photo %}
+                            <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="testimonial-avatar">
+                        {% else %}
+                            <div class="testimonial-avatar bg-primary d-flex align-items-center justify-content-center text-white">
+                                {{ testimonial.name|first }}
+                            </div>
+                        {% endif %}
+                        
+                        <div class="testimonial-info">
+                            <h6>{{ testimonial.name }}</h6>
+                            <small>{{ testimonial.university }}</small>
+                            <div class="text-warning">
+                                {% for i in "12345"|make_list %}
+                                    {% if forloop.counter <= testimonial.rating %}
+                                        <i class="fas fa-star"></i>
+                                    {% else %}
+                                        <i class="far fa-star"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center hero-content">
+                <h2 class="hero-title">Ready to Start Your Journey?</h2>
+                <p class="hero-subtitle">Choose the package that best fits your needs and let us help you achieve your dreams</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'support:contact' %}" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-comments me-2"></i>
+                        Contact Us
+                    </a>
+                    <a href="{% url 'support:chatbot' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-robot me-2"></i>
+                        Chat with Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
