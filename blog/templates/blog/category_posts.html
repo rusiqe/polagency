@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} Posts - Poland Study Agency Blog{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-4">{{ category.name }} Posts</h1>
+        <p class="text-xl text-gray-600">Explore posts from the {{ category.name }} category</p>
+    </div>
+
+    {% if page_obj %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {% for post in page_obj %}
+        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            {% if post.featured_image %}
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+            {% endif %}
+            <div class="p-6">
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-3">
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">{{ post.category.name }}</span>
+                    <span>{{ post.published_at|date:"M d, Y" }}</span>
+                </div>
+                <h2 class="text-xl font-semibold mb-3">
+                    <a href="{% url 'blog:post_detail' post.slug %}" class="hover:text-blue-600">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p class="text-gray-600 mb-4">{{ post.excerpt|truncatewords:25 }}</p>
+                <div class="flex items-center justify-between">
+                    <a href="{% url 'blog:post_detail' post.slug %}" 
+                       class="text-blue-600 hover:text-blue-800 font-medium">
+                        Read More →
+                    </a>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <span>{{ post.view_count }} views</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if page_obj.has_other_pages %}
+    <div class="flex justify-center">
+        <nav class="flex space-x-2">
+            {% if page_obj.has_previous %}
+            <a href="?page=1" 
+               class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">First</a>
+            <a href="?page={{ page_obj.previous_page_number }}" 
+               class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Previous</a>
+            {% endif %}
+            
+            <span class="px-3 py-2 bg-blue-600 text-white rounded-lg">
+                {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+            
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" 
+               class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" 
+               class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Last</a>
+            {% endif %}
+        </nav>
+    </div>
+    {% endif %}
+
+    {% else %}
+    <div class="text-center py-12">
+        <div class="text-6xl mb-4">📂</div>
+        <h2 class="text-2xl font-semibold mb-2">No posts found</h2>
+        <p class="text-gray-600 mb-6">
+            There are no posts available in the {{ category.name }} category at the moment.
+        </p>
+        <a href="{% url 'blog:home' %}" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            Back to Blog Home
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
