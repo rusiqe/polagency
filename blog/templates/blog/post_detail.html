@@ -18,7 +18,9 @@
         <!-- Post Header -->
         <header class="mb-8">
             {% if post.featured_image %}
-            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-64 md:h-96 object-cover rounded-lg mb-6">
+            <div class="featured-image-container mb-6">
+                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="featured-image">
+            </div>
             {% endif %}
             
             <div class="flex items-center text-sm text-gray-500 mb-4">
@@ -146,7 +148,7 @@
             {% for related_post in related_posts %}
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 {% if related_post.featured_image %}
-                <img src="{{ related_post.featured_image.url }}" alt="{{ related_post.title }}" class="w-full h-32 object-cover">
+                <img src="{{ related_post.featured_image.url }}" alt="{{ related_post.title }}" class="related-post-image">
                 {% endif %}
                 <div class="p-4">
                     <div class="text-sm text-gray-500 mb-2">{{ related_post.published_at|date:"M d, Y" }}</div>

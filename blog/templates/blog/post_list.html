@@ -50,9 +50,9 @@
     {% if page_obj %}
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {% for post in page_obj %}
-        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition blog-card">
             {% if post.featured_image %}
-            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
             {% endif %}
             <div class="p-6">
                 <div class="flex items-center justify-between text-sm text-gray-500 mb-3">

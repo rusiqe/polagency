@@ -399,6 +399,66 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+/* Featured Image Styling */
+.featured-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow);
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.featured-image:hover {
+    transform: scale(1.02);
+}
+
+/* Blog Post Images in Content */
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Blog Card Images */
+.blog-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Related Posts Images */
+.related-post-image {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.related-post-image:hover {
+    transform: scale(1.05);
+}
+
 /* Chat Widget */
 #chat-widget button {
     width: 60px;
