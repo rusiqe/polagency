@@ -15,7 +15,7 @@
     {% if featured_posts %}
     <section class="mb-12">
         <h2 class="text-3xl font-bold mb-6">Featured Posts</h2>
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="posts-grid">
             {% for post in featured_posts %}
             <div class="bg-white rounded-lg shadow-md overflow-hidden blog-card">
                 {% if post.featured_image %}
@@ -42,7 +42,7 @@
     {% if recent_posts %}
     <section class="mb-12">
         <h2 class="text-3xl font-bold mb-6 text-center">Recent Posts</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="recent-posts-grid">
             {% for post in recent_posts %}
             <a href="{% url 'blog:post_detail' post.slug %}" class="recent-post-card">
                 {% if post.featured_image %}

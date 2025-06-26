@@ -520,6 +520,19 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9;
 }
 
+/* CSS Grid for Posts */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.recent-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
 /* Placeholder Image for Posts without Featured Image */
 .placeholder-image {
     width: 100%;
@@ -531,8 +544,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }
 
-/* Mobile Responsiveness for Recent Posts */
+/* Mobile Responsiveness for Post Grids */
+@media (max-width: 1024px) {
+    .posts-grid,
+    .recent-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .posts-grid,
+    .recent-posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .recent-post-card {
         height: 220px;
     }
