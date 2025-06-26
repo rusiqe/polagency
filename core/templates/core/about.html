@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Poland Study Agency{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="bg-light py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">About Poland Study Agency</h1>
+        <p class="lead text-muted">Your trusted partner in making your dream of studying in Poland a reality</p>
+    </div>
+</div>
+
+<div class="container py-5">
+    <!-- Our Mission Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <h2 class="fw-bold">Our Mission</h2>
+            <p class="text-muted">Our mission is to bridge the gap between aspiring students from Africa and the world-class educational opportunities available in Poland. We are dedicated to providing transparent, reliable, and personalized guidance throughout the entire application and settlement process. We believe that education is a transformative journey, and we are here to ensure yours is smooth and successful.</p>
+            <a href="{% url 'core:contact' %}" class="btn btn-primary btn-lg">Get in Touch</a>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/mission.jpg' %}" alt="Our Mission" class="img-fluid rounded shadow">
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <div class="row align-items-center mb-5 bg-light p-5 rounded">
+        <div class="col-md-6 order-md-2">
+            <h2 class="fw-bold">Our Story</h2>
+            <p class="text-muted">Founded by a team of former international students who experienced the challenges and triumphs of studying abroad firsthand, Poland Study Agency was born out of a desire to simplify the process for others. We know what it’s like to navigate a new country, a new education system, and a new culture. This personal experience is at the heart of our approach, ensuring we provide not just advice, but genuine support and mentorship.</p>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <img src="{% static 'img/story.jpg' %}" alt="Our Story" class="img-fluid rounded shadow">
+        </div>
+    </div>
+
+    <!-- Our Team Section -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Meet Our Team</h2>
+        <p class="text-muted">We are a diverse team of education consultants, visa experts, and student mentors.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center mb-4">
+            <img src="{% static 'img/team1.jpg' %}" alt="Team Member" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+            <h5 class="fw-bold">Fatima Adebayo</h5>
+            <p class="text-muted">Lead Education Consultant</p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <img src="{% static 'img/team2.jpg' %}" alt="Team Member" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+            <h5 class="fw-bold">Kwame Owusu</h5>
+            <p class="text-muted">Visa and Immigration Specialist</p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <img src="{% static 'img/team3.jpg' %}" alt="Team Member" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+            <h5 class="fw-bold">Agnieszka Kowalski</h5>
+            <p class="text-muted">Head of Student Relations (Poland)</p>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="bg-light p-5 rounded mt-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Why Choose Us?</h2>
+            <p class="text-muted">We provide more than just admission assistance. We offer a complete support system.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h5 class="fw-bold">Expert Guidance</h5>
+                    <p class="text-muted">Our consultants have in-depth knowledge of the Polish education system.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="fw-bold">Personalized Support</h5>
+                    <p class="text-muted">We tailor our services to your unique academic and career goals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                    <div class="feature-icon mb-3">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5 class="fw-bold">Long-Term Partnership</h5>
+                    <p class="text-muted">We support you from your first inquiry until long after you've settled in Poland.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
