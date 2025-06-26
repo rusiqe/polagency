@@ -41,24 +41,22 @@
     <!-- Recent Posts -->
     {% if recent_posts %}
     <section class="mb-12">
-        <h2 class="text-3xl font-bold mb-6">Recent Posts</h2>
+        <h2 class="text-3xl font-bold mb-6 text-center">Recent Posts</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for post in recent_posts %}
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <a href="{% url 'blog:post_detail' post.slug %}" class="recent-post-card">
                 {% if post.featured_image %}
-                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-32 object-cover">
-                {% endif %}
-                <div class="p-4">
-                    <div class="text-sm text-gray-500 mb-2">
-                        <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">{{ post.category.name }}</span>
-                        <span class="ml-2">{{ post.published_at|date:"M d" }}</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">
-                        <a href="{% url 'blog:post_detail' post.slug %}" class="hover:text-blue-600">{{ post.title }}</a>
-                    </h3>
-                    <p class="text-gray-600 text-sm">{{ post.excerpt|truncatewords:15 }}</p>
+                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                {% else %}
+                <div class="placeholder-image">
+                    <span class="text-white text-2xl">📖</span>
                 </div>
-            </div>
+                {% endif %}
+                <div class="post-overlay">
+                    <h3 class="text-lg font-semibold">{{ post.title }}</h3>
+                    <span class="text-sm opacity-80">{{ post.published_at|date:"M d, Y" }}</span>
+                </div>
+            </a>
             {% endfor %}
         </div>
         <div class="text-center mt-8">
