@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Poland Study Agency{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="bg-light py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Get in Touch</h1>
+        <p class="lead text-muted">We're here to help you on your journey to studying in Poland. Reach out to us with any questions.</p>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="card h-100">
+                <div class="card-body p-5">
+                    <h2 class="fw-bold mb-4">Send Us a Message</h2>
+                    <form id="contact-form">
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="col-lg-4">
+            <div class="card h-100">
+                <div class="card-body p-5">
+                    <h2 class="fw-bold mb-4">Contact Info</h2>
+                    <ul class="list-unstyled">
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold">Our Office</h6>
+                                <p class="text-muted">123 Education Lane, Warsaw, Poland</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold">Email Us</h6>
+                                <p class="text-muted">contact@polandstudyagency.com</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-phone-alt fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="fw-bold">Call Us</h6>
+                                <p class="text-muted">+48 123 456 789</p>
+                            </div>
+                        </li>
+                        <li class="d-flex">
+                            <i class="fab fa-whatsapp fa-2x text-success me-3"></i>
+                            <div>
+                                <h6 class="fw-bold">WhatsApp</h6>
+                                <p class="text-muted">+48 987 654 321</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="mt-5">
+        <div class="card">
+            <div class="card-body p-0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.992855219833!2d21.01222861580983!3d52.22967567975816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f61%3A0x79471e654925765!2sPalace%20of%20Culture%20and%20Science!5e0!3m2!1sen!2spl!4v1624368560248!5m2!1sen!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
