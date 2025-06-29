@@ -8,30 +8,34 @@ django.setup()
 
 from services.models import Testimonial
 
+# Clear existing testimonials
+Testimonial.objects.all().delete()
+print("Cleared existing testimonials.")
+
 testimonials_data = [
     {
-        "name": "Adanna Okoro",
-        "testimonial_text": "The team at Poland Study Agency made my dream of studying nursing in Europe a reality. Their step-by-step guidance was invaluable, especially during the visa process. I felt supported from my first inquiry until I was settled in my dorm. Highly recommended!",
-        "rating": 5
+        "name": "Amina Yusuf",
+        "testimonial_text": "The milestone payment structure was a lifesaver. It made the whole process financially manageable. The team's guidance for my Nursing application was flawless, and their support during the visa stage was incredible. I couldn't have done it without them!",
+        "rating": 5,
+        "program": "BSc Nursing"
     },
     {
-        "name": "David Chen",
-        "testimonial_text": "I was completely lost with the application process, but their consultants broke it down into manageable steps. The milestone payments made it affordable, and the team was always available to answer my questions. A truly professional and caring agency.",
-        "rating": 5
+        "name": "John Omondi",
+        "testimonial_text": "I was looking for a top-tier Data Science program, and this agency delivered. They found the perfect MSc program for me and handled all the application complexities. The post-arrival support, especially the TRC assistance, was beyond helpful.",
+        "rating": 5,
+        "program": "MSc Data Science"
     },
     {
-        "name": "Chidinma Eze",
-        "testimonial_text": "As a parent, I was worried about sending my daughter abroad. The free consultation call with the agent and my daughter put all my fears to rest. They were transparent about the process and costs, and their on-ground support in Poland is fantastic.",
-        "rating": 5
+        "name": "Sandra Williams",
+        "testimonial_text": "From choosing the right Computer Science university to the final airport pickup, the process was seamless. The free consultation call for me and my parents was very reassuring. A truly professional and trustworthy agency for any aspiring student.",
+        "rating": 5,
+        "program": "BSc Computer Science"
     }
 ]
 
 for data in testimonials_data:
-    if not Testimonial.objects.filter(name=data["name"]).exists():
-        Testimonial.objects.create(**data)
-        print(f"Created testimonial for {data['name']}")
-    else:
-        print(f"Testimonial for {data['name']} already exists.")
+    Testimonial.objects.create(**data)
+    print(f"Created testimonial for {data['name']}")
 
-print("Testimonial population complete!")
+print("New testimonial population complete!")
 

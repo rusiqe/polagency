@@ -314,6 +314,24 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #ffc107;
 }
 
+/* Payment Structure */
+.payment-structure {
+    background: var(--bg-light);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.payment-item {
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.payment-item:last-child {
+    border-bottom: none;
+}
+
 /* Milestone Cards */
 .milestone-card {
     background: white;
