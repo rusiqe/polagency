@@ -16,11 +16,13 @@ class University(models.Model):
     email = models.EmailField(blank=True)
     phone = models.CharField(max_length=20, blank=True)
     address = models.TextField(blank=True)
+    logo = models.ImageField(upload_to='universities/logos/', blank=True)
     description = models.TextField(blank=True)
     established_year = models.IntegerField(null=True, blank=True)
     student_count = models.IntegerField(null=True, blank=True)
     international_students = models.BooleanField(default=True)
     english_programs = models.BooleanField(default=False)
+    application_deadline = models.DateField(null=True, blank=True)
     
     # SEO and search fields
     slug = models.SlugField(unique=True, blank=True)
