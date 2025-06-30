@@ -1,0 +1,26 @@
+name,name_polish,city,university_type,website,english_programs,description,application_deadline
+Jagiellonian University,Uniwersytet Jagielloński,Kraków,public,https://en.uj.edu.pl/,True,"One of the oldest and most prestigious universities in the world, founded in 1364.",2025-07-15
+University of Warsaw,Uniwersytet Warszawski,Warsaw,public,https://en.uw.edu.pl/,True
+AGH University of Science and Technology,Akademia Górniczo-Hutnicza,Kraków,public,https://www.agh.edu.pl/en/,True
+Warsaw University of Technology,Politechnika Warszawska,Warsaw,public,https://www.pw.edu.pl/engpw,True
+Adam Mickiewicz University,Uniwersytet im. Adama Mickiewicza w Poznaniu,Poznań,public,https://amu.edu.pl/en,True
+Medical University of Lublin,Uniwersytet Medyczny w Lublinie,Lublin,public,https://www.umlub.pl/en/,True
+Lublin University of Technology,Politechnika Lubelska,Lublin,public,https://en.pollub.pl/,True
+Vincent Pol University in Lublin,Wyższa Szkoła Społeczno-Przyrodnicza im. Wincentego Pola,Lublin,private,https://vpu.edu.pl/,True
+University of Life Sciences in Lublin,Uniwersytet Przyrodniczy w Lublinie,Lublin,public,https://up.lublin.pl/en/,True
+University of Wrocław,Uniwersytet Wrocławski,Wrocław,public,https://international.uni.wroc.pl/,True
+Wrocław University of Science and Technology,Politechnika Wrocławska,Wrocław,public,https://pwr.edu.pl/en/,True
+Wrocław Medical University,Uniwersytet Medyczny im. Piastów Śląskich we Wrocławiu,Wrocław,public,https://www.umw.edu.pl/pl,True
+Wrocław University of Environmental and Life Sciences,Uniwersytet Przyrodniczy we Wrocławiu,Wrocław,public,https://upwr.edu.pl/en/,True
+Wrocław University of Economics and Business,Uniwersytet Ekonomiczny we Wrocławiu,Wrocław,public,https://www.ue.wroc.pl/en/,True
+University of Lower Silesia,Dolnośląska Szkoła Wyższa,Wrocław,private,https://www.dsw.edu.pl/en/,True
+University of Gdańsk,Uniwersytet Gdański,Gdańsk,public,https://en.ug.edu.pl/,True
+Gdańsk University of Technology,Politechnika Gdańska,Gdańsk,public,https://pg.edu.pl/en,True
+Medical University of Gdańsk,Gdański Uniwersytet Medyczny,Gdańsk,public,https://mug.edu.pl/en,True
+University of Łódź,Uniwersytet Łódzki,Łódź,public,https://iso.uni.lodz.pl/en/,True
+Łódź University of Technology,Politechnika Łódzka,Łódź,public,https://www.p.lodz.pl/en,True
+Medical University of Lodz,Uniwersytet Medyczny w Łodzi,Łódź,public,https://umed.pl/en/,True
+SGH Warsaw School of Economics,Szkoła Główna Handlowa w Warszawie,Warsaw,public,https://www.sgh.waw.pl/en,True
+Kozminski University,Akademia Leona Koźmińskiego,Warsaw,private,https://www.kozminski.edu.pl/en,True
+SWPS University of Social Sciences and Humanities,SWPS Uniwersytet Humanistycznospołeczny,Warsaw,private,https://english.swps.pl/,True
+

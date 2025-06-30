@@ -24,10 +24,8 @@
             {% endif %}
             
             <div class="flex items-center text-sm text-gray-500 mb-4">
-                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">{{ post.category.name }}</span>
-                <span class="mx-3">•</span>
-                <span>{{ post.published_at|date:"F d, Y" }}</span>
-                <span class="mx-3">•</span>
+                
+                
                 <span>{{ post.view_count }} views</span>
                 {% if post.read_time %}
                 <span class="mx-3">•</span>
@@ -41,17 +39,6 @@
             <p class="text-xl text-gray-600 leading-relaxed">{{ post.excerpt }}</p>
             {% endif %}
             
-            <div class="flex items-center mt-6 pt-6 border-t border-gray-200">
-                <div class="flex items-center">
-                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span class="text-blue-600 font-semibold">{{ post.author.first_name.0|default:post.author.username.0 }}</span>
-                    </div>
-                    <div class="ml-3">
-                        <p class="font-medium">{{ post.author.get_full_name|default:post.author.username }}</p>
-                        <p class="text-sm text-gray-500">Author</p>
-                    </div>
-                </div>
-            </div>
         </header>
 
         <!-- Post Content -->
@@ -94,51 +81,6 @@
         </div>
     </article>
 
-    <!-- Comments Section -->
-    {% if post.allow_comments %}
-    <div class="max-w-4xl mx-auto mt-12">
-        <h3 class="text-2xl font-bold mb-6">Comments ({{ comments.count }})</h3>
-        
-        <!-- Comment Form -->
-        <div class="mb-8 p-6 bg-gray-50 rounded-lg">
-            <h4 class="text-lg font-semibold mb-4">Leave a Comment</h4>
-            <form method="post" class="space-y-4">
-                {% csrf_token %}
-                <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Your Name" required 
-                           class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-                    <input type="email" name="email" placeholder="Your Email" required 
-                           class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-                </div>
-                <input type="url" name="website" placeholder="Website (optional)" 
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-                <textarea name="content" rows="4" placeholder="Your comment" required 
-                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                    Post Comment
-                </button>
-            </form>
-        </div>
-
-        <!-- Comments List -->
-        {% for comment in comments %}
-        <div class="mb-6 p-6 bg-white border border-gray-200 rounded-lg">
-            <div class="flex items-center mb-3">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span class="text-blue-600 font-semibold">{{ comment.name.0 }}</span>
-                </div>
-                <div class="ml-3">
-                    <p class="font-medium">{{ comment.name }}</p>
-                    <p class="text-sm text-gray-500">{{ comment.created_at|date:"F d, Y \a\t H:i" }}</p>
-                </div>
-            </div>
-            <p class="text-gray-700">{{ comment.content|linebreaks }}</p>
-        </div>
-        {% empty %}
-        <p class="text-gray-500 text-center py-8">No comments yet. Be the first to comment!</p>
-        {% endfor %}
-    </div>
-    {% endif %}
 
     <!-- Related Posts -->
     {% if related_posts %}
@@ -165,4 +107,11 @@
     </div>
     {% endif %}
 </div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script>
+    // Post-specific JavaScript can go here if needed
+</script>
 {% endblock %}

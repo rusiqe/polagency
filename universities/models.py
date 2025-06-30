@@ -17,7 +17,7 @@ class University(models.Model):
     phone = models.CharField(max_length=20, blank=True)
     address = models.TextField(blank=True)
     logo = models.ImageField(upload_to='universities/logos/', blank=True)
-    description = models.TextField(blank=True)
+    description = models.TextField(blank=True, null=True)
     established_year = models.IntegerField(null=True, blank=True)
     student_count = models.IntegerField(null=True, blank=True)
     international_students = models.BooleanField(default=True)
@@ -73,6 +73,7 @@ class StudyProgram(models.Model):
     tuition_fee_eur = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     description = models.TextField(blank=True)
     admission_requirements = models.TextField(blank=True)
+    application_deadline = models.DateField(null=True, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

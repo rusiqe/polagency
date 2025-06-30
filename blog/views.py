@@ -1,11 +1,15 @@
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 from django.db.models import Q, F
 from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 from django.utils import timezone
-from .models import BlogPost, BlogCategory, BlogComment, BlogTag, InstagramFeed, Newsletter
+
+from .models import BlogPost, BlogCategory, BlogTag, InstagramFeed, Newsletter
+
 
 def blog_home(request):
     """Blog homepage with featured posts and Instagram feed"""
@@ -97,8 +101,6 @@ def post_detail(request, slug):
     # Increment view count
     BlogPost.objects.filter(id=post.id).update(view_count=F('view_count') + 1)
     
-    # Get approved comments
-    comments = post.comments.filter(status='approved', parent=None).order_by('created_at')
     
     # Get related posts
     related_posts = BlogPost.objects.filter(
@@ -106,50 +108,14 @@ def post_detail(request, slug):
         category=post.category
     ).exclude(id=post.id)[:3]
     
-    # Handle comment submission
-    if request.method == 'POST':
-        return handle_comment_submission(request, post)
     
     context = {
         'post': post,
-        'comments': comments,
         'related_posts': related_posts,
     }
     
     return render(request, 'blog/post_detail.html', context)
 
-def handle_comment_submission(request, post):
-    """Handle comment form submission"""
-    if not post.allow_comments:
-        messages.error(request, 'Comments are not allowed on this post.')
-        return redirect('blog:post_detail', slug=post.slug)
-    
-    try:
-        # Get client IP
-        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-        if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0]
-        else:
-            ip = request.META.get('REMOTE_ADDR')
-        
-        # Create comment
-        comment = BlogComment.objects.create(
-            post=post,
-            name=request.POST.get('name'),
-            email=request.POST.get('email'),
-            website=request.POST.get('website', ''),
-            content=request.POST.get('content'),
-            ip_address=ip,
-            user_agent=request.META.get('HTTP_USER_AGENT', ''),
-            parent_id=request.POST.get('parent_id') if request.POST.get('parent_id') else None
-        )
-        
-        messages.success(request, 'Your comment has been submitted and is awaiting approval.')
-        
-    except Exception as e:
-        messages.error(request, 'There was an error submitting your comment. Please try again.')
-    
-    return redirect('blog:post_detail', slug=post.slug)
 
 def category_posts(request, slug):
     """Display posts from a specific category"""
@@ -249,4 +215,5 @@ def search_posts(request):
     }
     
     return render(request, 'blog/search_results.html', context)
+
 

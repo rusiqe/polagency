@@ -1,3 +1,22 @@
+
+.comment-bubble {
+    background-color: #f0f2f5;
+    border-radius: 18px;
+    padding: 8px 12px;
+    display: inline-block;
+    max-width: 50vw;
+}
+
+.comment-actions a {
+    color: #65676b;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.comment-actions a:hover {
+    text-decoration: underline;
+}
+
 /* Custom CSS for Poland Study Agency */
 
 :root {
@@ -844,5 +863,9 @@ h1, h2, h3, h4, h5, h6 {
 .whatsapp-button:hover {
     background-color: #128C7E;
     transform: scale(1.1);
+}
+
+footer .text-muted {
+    color: #adb5bd !important; 
 }
 

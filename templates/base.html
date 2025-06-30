@@ -22,7 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="{% load static %}{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% load static %}{% static 'css/style.css' %}?v={{ cache_buster }}" rel="stylesheet">
     
     {% block extra_css %}{% endblock %}
 </head>
@@ -32,7 +32,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="{% url 'core:home' %}">
                 <i class="fas fa-graduation-cap me-2"></i>
-                Poland Study Agency
+                A to Z Poland Moves
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -91,7 +91,7 @@
                 <div class="col-lg-4 mb-4">
                     <h5 class="fw-bold mb-3">
                         <i class="fas fa-graduation-cap me-2"></i>
-                        Poland Study Agency
+                        A to Z Poland Moves
                     </h5>
                     <p class="text-muted">
                         Your trusted partner for studying in Poland. We provide comprehensive support 
@@ -158,7 +158,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <p class="text-muted mb-0">
-                        &copy; 2025 Poland Study Agency. All rights reserved.
+                        &copy; 2025 A to Z Poland Moves. All rights reserved.
                     </p>
                 </div>
                 <div class="col-md-6 text-md-end">
@@ -169,41 +169,9 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div id="chat-widget" class="position-fixed bottom-0 end-0 m-4" style="z-index: 1050;">
-        <button class="btn btn-primary rounded-circle p-3 shadow" data-bs-toggle="modal" data-bs-target="#chatModal">
-            <i class="fas fa-comments fa-lg"></i>
-        </button>
-    </div>
-
-    <!-- Chat Modal -->
-    <div class="modal fade" id="chatModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">
-                        <i class="fas fa-robot me-2"></i>
-                        Support Chat
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body" id="chat-messages" style="height: 400px; overflow-y: auto;">
-                    <!-- Chat messages will be loaded here -->
-                </div>
-                <div class="modal-footer">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="chat-input" placeholder="Type your message...">
-                        <button class="btn btn-primary" id="send-message">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- JavaScript -->
-    <a href="https://wa.me/48987654321" target="_blank" class="whatsapp-button">
+    <a href="https://wa.me/48532007086" target="_blank" class="whatsapp-button">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -234,8 +202,6 @@
             }
         }, 1000);
     </script>
-</body>
-</html>
     {% block extra_js %}{% endblock %}
 </body>
 </html>

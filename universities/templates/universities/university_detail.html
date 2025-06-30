@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ university.name }} - Poland Study Agency{% endblock %}
+
+{% block content %}
+<!-- University Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-2 text-center mb-4 mb-lg-0">
+                {% if university.logo %}
+                    <img src="{{ university.logo.url }}" alt="{{ university.name }} Logo" class="university-detail-logo">
+                {% endif %}
+            </div>
+            <div class="col-lg-10">
+                <h1 class="hero-title">{{ university.name }}</h1>
+                <p class="hero-subtitle">{{ university.name_polish }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+    <!-- University Description -->
+    <div class="mb-5">
+        <h2 class="section-title">About the University</h2>
+        <p class="lead text-muted">{{ university.description }}</p>
+    </div>
+
+    <!-- English-Taught Programs -->
+    <div class="mb-5">
+        <h2 class="section-title">English-Taught Programs</h2>
+        <div class="table-responsive">
+            <table class="table table-hover university-programs-table">
+                <thead>
+                    <tr>
+                        <th>Program Name</th>
+                        <th>Degree Level</th>
+                        <th>Tuition Fee (EUR/year)</th>
+                        <th>Application Deadline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for program in university.programs.all %}
+                        <tr>
+                            <td>{{ program.name }}</td>
+                            <td>{{ program.get_degree_level_display }}</td>
+                            <td>€{{ program.tuition_fee_eur|floatformat:2 }}</td>
+                            <td>{{ program.application_deadline|date:"F d, Y" }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4" class="text-center">No English-taught programs listed for this university. Please contact us for the latest information.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- University Details -->
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="detail-card">
+                <i class="fas fa-map-marker-alt detail-icon"></i>
+                <h5 class="fw-bold">Location</h5>
+                <p class="text-muted">{{ university.city }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="detail-card">
+                <i class="fas fa-globe detail-icon"></i>
+                <h5 class="fw-bold">Website</h5>
+                <p><a href="{{ university.website }}" target="_blank" class="text-primary">{{ university.website }}</a></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="detail-card">
+                <i class="fas fa-calendar-alt detail-icon"></i>
+                <h5 class="fw-bold">General Deadline</h5>
+                <p class="text-muted">{{ university.application_deadline|date:"F d, Y" }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

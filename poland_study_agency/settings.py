@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'support',
     'services',
     'blog',
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processors.cache_buster',
             ],
         },
     },
@@ -165,4 +167,7 @@ MARKDOWNX_IMAGE_MAX_SIZE = {'size': (1000, 1000), 'quality': 90}
 MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'
 MARKDOWNX_UPLOAD_FILE_PATH = 'markdownx/'
 MARKDOWNX_EDITOR_RESIZABLE = True
+
+LOGIN_REDIRECT_URL = '/profiles/profile/'
+
 

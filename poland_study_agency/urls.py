@@ -26,6 +26,8 @@ urlpatterns = [
     path('support/', include('support.urls')),
     path('services/', include('services.urls')),
     path('blog/', include('blog.urls')),
+    path('profiles/', include('profiles.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('markdownx/', include('markdownx.urls')),
 ]
 

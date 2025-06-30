@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.utils import timezone
 from markdownx.admin import MarkdownxModelAdmin
-from .models import BlogCategory, BlogPost, BlogComment, BlogTag, InstagramFeed, Newsletter
+from .models import BlogCategory, BlogPost, BlogTag, InstagramFeed, Newsletter
 
 @admin.register(BlogCategory)
 class BlogCategoryAdmin(admin.ModelAdmin):
@@ -60,29 +60,6 @@ class BlogPostAdmin(MarkdownxModelAdmin):
     def get_queryset(self, request):
         return super().get_queryset(request).select_related('author', 'category')
 
-@admin.register(BlogComment)
-class BlogCommentAdmin(admin.ModelAdmin):
-    list_display = ['post', 'name', 'email', 'status', 'created_at']
-    list_filter = ['status', 'created_at']
-    search_fields = ['name', 'email', 'content', 'post__title']
-    list_editable = ['status']
-    readonly_fields = ['ip_address', 'user_agent', 'created_at', 'updated_at']
-    
-    fieldsets = (
-        ('Comment Information', {
-            'fields': ('post', 'name', 'email', 'website', 'content')
-        }),
-        ('Moderation', {
-            'fields': ('status', 'parent')
-        }),
-        ('Technical Information', {
-            'fields': ('ip_address', 'user_agent', 'created_at', 'updated_at'),
-            'classes': ('collapse',)
-        }),
-    )
-    
-    def get_queryset(self, request):
-        return super().get_queryset(request).select_related('post')
 
 @admin.register(BlogTag)
 class BlogTagAdmin(admin.ModelAdmin):

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .profile-container {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .table-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .status-pending {
+    color: orange;
+  }
+  .status-under_review {
+    color: blue;
+  }
+  .status-submitted {
+    color: purple;
+  }
+  .status-approved {
+    color: green;
+  }
+</style>
+
+<div class="profile-container">
+  <div class="profile-header">
+    <h1>Welcome, {{ profile.user.username }}</h1>
+  </div>
+
+  <div class="table-container">
+    <h2>Required Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Required Documents</th>
+          <th>File Name</th>
+          <th>Status</th>
+          <th>Upload</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pm in milestones %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ pm.milestone.name }}</td>
+            <td>{% if pm.uploaded_file %}{{ pm.uploaded_file.name }}{% endif %}</td>
+            <td class="status-{{ pm.status }}">{{ pm.get_status_display }}</td>
+            <td>
+              <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="hidden" name="milestone_id" value="{{ pm.id }}">
+                <input type="file" name="uploaded_file">
+                <button type="submit">Upload</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+

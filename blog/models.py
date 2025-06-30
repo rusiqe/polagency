@@ -98,33 +98,26 @@ class BlogPost(models.Model):
     def __str__(self):
         return self.title
 
-class BlogComment(models.Model):
-    COMMENT_STATUS = [
-        ('pending', 'Pending Approval'),
-        ('approved', 'Approved'),
-        ('rejected', 'Rejected'),
-    ]
-    
-    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    website = models.URLField(blank=True)
-    content = models.TextField()
-    status = models.CharField(max_length=10, choices=COMMENT_STATUS, default='pending')
-    ip_address = models.GenericIPAddressField()
-    user_agent = models.TextField(blank=True)
-    
-    # Reply functionality
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')
-    
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    
-    class Meta:
-        ordering = ['created_at']
-    
-    def __str__(self):
-        return f"Comment by {self.name} on {self.post.title}"
+# class BlogComment(models.Model)
+#     email = models.EmailField()
+#     website = models.URLField(blank=True)
+#     content = models.TextField()
+#     status = models.CharField(max_length=10, choices=COMMENT_STATUS, default='pending')
+#     ip_address = models.GenericIPAddressField()
+#     user_agent = models.TextField(blank=True)
+#
+#     # Reply functionality
+#     likes = models.PositiveIntegerField(default=0)
+#     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')
+#
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+#
+#     class Meta:
+#         ordering = ['created_at']
+#
+#     def __str__(self):
+#         return f"Comment by {self.name} on {self.post.title}"
 
 class BlogTag(models.Model):
     name = models.CharField(max_length=50, unique=True)
