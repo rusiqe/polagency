@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'markdownx',
     'core',
     'support',
@@ -168,7 +169,7 @@ MARKDOWNX_UPLOAD_FILE_PATH = 'markdownx/'
 MARKDOWNX_EDITOR_RESIZABLE = True
 
 
-# Email Configuration
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
