@@ -14,32 +14,14 @@
 
 <div class="container py-5">
     <div class="row">
-        <!-- Contact Form -->
         <div class="col-lg-8 mb-5 mb-lg-0">
-            <div class="card h-100">
-                <div class="card-body p-5">
-                    <h2 class="fw-bold mb-4">Send Us a Message</h2>
-                    <form id="contact-form">
-                        <div class="row mb-3">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                    </form>
+            <div class="card h-100 text-white">
+{% load static %}
+<img src="{% static 'images/contact-envelope.jpg' %}" class="card-img h-100" alt="Red envelope with heart - contact us" style="object-fit: cover;">
+                <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center" style="background-color: rgba(0, 0, 0, 0.5);">
+                    <h2 class="fw-bold">We're here to help!</h2>
+                    <p class="lead">For any inquiries, please use the contact information provided or visit our support center.</p>
+                    <a href="{% url 'support:chatbot' %}" class="btn btn-light btn-lg mt-3">Go to Support Center</a>
                 </div>
             </div>
         </div>
@@ -54,21 +36,21 @@
                             <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
                             <div>
                                 <h6 class="fw-bold">Our Office</h6>
-                                <p class="text-muted">123 Education Lane, Warsaw, Poland</p>
+                                <p class="text-muted">Jasna 3, 20-077, Lublin, Poland</p>
                             </div>
                         </li>
                         <li class="d-flex mb-3">
                             <i class="fas fa-envelope fa-2x text-primary me-3"></i>
                             <div>
                                 <h6 class="fw-bold">Email Us</h6>
-                                <p class="text-muted">contact@polandstudyagency.com</p>
+                                <p class="text-muted">contact@atozpolandmoves.com</p>
                             </div>
                         </li>
                         <li class="d-flex mb-3">
                             <i class="fas fa-phone-alt fa-2x text-primary me-3"></i>
                             <div>
                                 <h6 class="fw-bold">Call Us</h6>
-                                <p class="text-muted">+48 123 456 789</p>
+                                <p class="text-muted">+48 532 007 086</p>
                             </div>
                         </li>
                         <li class="d-flex">

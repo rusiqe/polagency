@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Count
 from .models import HomePage, SiteSettings
-from universities.models import University
 from services.models import ServicePackage, Testimonial
 from blog.models import BlogPost, InstagramFeed
 
@@ -25,13 +24,6 @@ def home(request):
     # Get Instagram posts
     instagram_posts = InstagramFeed.objects.filter(is_active=True)[:4]
     
-    # Get university statistics
-    university_stats = {
-        'total_universities': University.objects.count(),
-        'public_universities': University.objects.filter(university_type='public').count(),
-        'private_universities': University.objects.filter(university_type='private').count(),
-        'english_programs': University.objects.filter(english_programs=True).count(),
-    }
     
     context = {
         'homepage': homepage,
@@ -39,7 +31,7 @@ def home(request):
         'testimonials': testimonials,
         'recent_posts': recent_posts,
         'instagram_posts': instagram_posts,
-        'university_stats': university_stats,
+        'university_stats': None,
     }
     
     return render(request, 'core/home.html', context)
@@ -51,7 +43,6 @@ def about(request):
     
     # Get some statistics
     stats = {
-        'universities': University.objects.count(),
         'students_helped': 1000,  # This could be from orders or a separate model
         'success_rate': 95,
         'years_experience': 5,
@@ -66,11 +57,6 @@ def about(request):
 
 def contact(request):
     """Contact page view"""
-    if request.method == 'POST':
-        # Handle contact form submission
-        # This could integrate with the support app's ContactRequest model
-        pass
-    
     return render(request, 'core/contact.html')
 
 def privacy_policy(request):
@@ -84,12 +70,11 @@ def terms_of_service(request):
 def sitemap(request):
     """Sitemap page for SEO"""
     # Get all public URLs
-    universities = University.objects.all()[:50]  # Limit for performance
     blog_posts = BlogPost.objects.filter(status='published')[:50]
     service_packages = ServicePackage.objects.filter(is_active=True)
     
     context = {
-        'universities': universities,
+        'universities': None,
         'blog_posts': blog_posts,
         'service_packages': service_packages,
     }

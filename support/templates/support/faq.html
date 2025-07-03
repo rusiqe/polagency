@@ -1,0 +1,61 @@
+
+{% extends 'base.html' %}
+
+{% block title %}FAQ - Poland Study Agency{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row mb-5 align-items-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold">Frequently Asked Questions</h1>
+            <p class="lead text-muted">At A to Z Poland Moves, we believe that your journey to studying in Poland should be as smooth and stress-free as possible. We're here to answer your questions and guide you every step of the way. If you don't find the answer you're looking for, please don't hesitate to contact us.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+            <img src="https://images.unsplash.com/photo-1593642702821-c84b04e00b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Happy student in Poland" class="img-fluid rounded-3 shadow">
+        </div>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How do I get started?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p>The best way to get started is to schedule a free consultation with one of our experts. We'll discuss your goals, answer your initial questions, and outline the next steps. You can book a call that fits your schedule by clicking the link below.</p>
+                    <a href="https://cal.com/a-to-z-poland/30min" class="btn btn-primary">Schedule a Free Call</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How long will it take to move?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p>The timeline can vary depending on your individual circumstances and the specifics of your application. However, once we've completed the initial consultation and all the milestones are on track, the process typically takes between 4 to 8 months.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Is there a guarantee this works?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <p>While we cannot offer a 100% guarantee of visa acceptance on the first attempt, as the final decision rests with the visa authorities, we do guarantee our unwavering support and persistence. We will work with you and re-apply as many times as necessary. We recently had a student who was successful on their fifth application, and we were with them every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

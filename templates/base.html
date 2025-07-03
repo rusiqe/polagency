@@ -47,15 +47,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'core:about' %}">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Universities
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'universities:university_list' %}">All Universities</a></li>
-                            <li><a class="dropdown-item" href="{% url 'universities:program_search' %}">Search Programs</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'services:packages' %}">Services</a>
                     </li>
@@ -98,10 +89,7 @@
                         from university selection to successful integration.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
@@ -110,7 +98,6 @@
                     <ul class="list-unstyled">
                         <li><a href="{% url 'core:about' %}" class="text-muted text-decoration-none">About Us</a></li>
                         <li><a href="{% url 'services:packages' %}" class="text-muted text-decoration-none">Services</a></li>
-                        <li><a href="{% url 'universities:university_list' %}" class="text-muted text-decoration-none">Universities</a></li>
                         <li><a href="{% url 'blog:home' %}" class="text-muted text-decoration-none">Blog</a></li>
                     </ul>
                 </div>
@@ -121,7 +108,7 @@
                         <li><a href="{% url 'support:faq' %}" class="text-muted text-decoration-none">FAQ</a></li>
                         <li><a href="{% url 'support:contact' %}" class="text-muted text-decoration-none">Contact</a></li>
                         <li><a href="{% url 'support:chatbot' %}" class="text-muted text-decoration-none">Live Chat</a></li>
-                        <li><a href="{% url 'services:testimonials' %}" class="text-muted text-decoration-none">Testimonials</a></li>
+                        <!-- <li><a href="{% url 'services:testimonials' %}" class="text-muted text-decoration-none">Testimonials</a></li> -->
                     </ul>
                 </div>
                 
@@ -142,14 +129,6 @@
                         </p>
                     </div>
                     
-                    <!-- Newsletter Signup -->
-                    <div class="newsletter-signup">
-                        <h6 class="fw-bold mb-2">Newsletter</h6>
-                        <form id="newsletter-form" class="d-flex">
-                            <input type="email" class="form-control me-2" placeholder="Your email" required>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </form>
-                    </div>
                 </div>
             </div>
             

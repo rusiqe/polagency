@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en-US" class="occasional-normal">
+	<head>
+		<meta charset="utf-8">
+		<!--
+	Proudly presented by INV based on the TYPO3
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2025 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+		<link rel="icon" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Images/favicon.png" type="image/png">
+		<title>MOBILITY</title>
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+		<meta name="robots" content="index,follow">
+		<meta property="og:image" content="https://www.uni.lodz.pl/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Images/shareImage.jpeg">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="https://www.uni.lodz.pl/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Images/shareImage.jpeg">
+		<meta name="apple-mobile-web-app-capable" content="no">
+		<meta name="google" content="notranslate">
+		<link rel="stylesheet" href="/typo3temp/assets/compressed/merged-e8accd263f2f3d22a07a524610b65ceb.css?1751298438" media="all">
+		<script id="om-cookie-consent" type="application/json">{"group-1":{"gtm":""},"group-3":{"gtm":""}}</script>
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-Black.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-BlackItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-Bold.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-BoldItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-ExtraBold.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-ExtraBoldItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-ExtraLight.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-ExtraLightItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-Light.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-LightItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-Medium.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-MediumItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-Regular.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-RegularItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-SemiBold.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-SemiBoldItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-Thin.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/Montserrat/woff/Montserrat-ThinItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Fonts/icons/ul.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="prev" href="/en/prospective-student-zone/admission">
+		<link rel="next" href="/en/prospective-student-zone/campus">
+		<link rel="canonical" href="https://www.uni.lodz.pl/en/mobility"> </head>
+	<body id="p7078" class="page-7078 pagelevel-2 language-1 backendlayout-U_L_subpage_last layout-default">
+		<div id="top"></div>
+		<div class="body-bg body-bg-top"><a id="skip-link" class="sr-only sr-only-focusable" href="#site-main-content"><span>Skip to main content</span></a>
+			<header class="header">
+				<nav id="nav" class="header__nav">
+					<div class="container-box container-box--xl">
+						<div class="header__nav-content">
+							<div id="mainMenuWrapper" class="header__menu-wrapper">
+								<ul id="mainMenu" class="header__menu">
+									<li class="header__menu-item zone-menu-wrapper"> <a href="" class="header__menu-item-link header__menu-item-link--hasChilds"> PROSPECTIVE STUDENT ZONE </a>
+										<div class="megamenu">
+											<div class="megamenu__nav menu">
+												<div class="menu__wrap">
+													<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="Pierwszy poziom podmenu">
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/news" class="menu__link menu__link_content_type_news" target=""> NEWS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/events" class="menu__link menu__link_content_type_" target=""> EVENTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-43" aria-owns="submenu-43" href="#"> ADMISSION </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-7078" aria-owns="submenu-7078" href="#"> MOBILITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-236" aria-owns="submenu-236" href="#"> CAMPUS </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-243" aria-owns="submenu-243" href="#"> GROWTH </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-2527" aria-owns="submenu-2527" href="#"> SUPPORT </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-383" aria-owns="submenu-383" href="#"> COMMUNITY </a> </li>
+														 </ul>
+													<ul data-menu="submenu-43" id="submenu-43" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="ADMISSION">
+														<li class="menu__item" role="menuitem"> <a href="/en/how-to-apply" class="menu__link" target=""> HOW TO APPLY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/programme-offer-and-fees" class="menu__link" target=""> PROGRAMME OFFER AND FEES </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/required-documents" class="menu__link" target=""> REQUIRED DOCUMENTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prepare-for-arrival" class="menu__link" target=""> PREPARE FOR ARRIVAL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/accommodation" class="menu__link" target=""> ACCOMMODATION </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/scholarships-and-career" class="menu__link" target=""> SCHOLARSHIPS AND CAREER </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/contact-us" class="menu__link" target=""> CONTACT US </a> </li>
+														 </ul>
+													<ul data-menu="submenu-7078" id="submenu-7078" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="MOBILITY">
+														<li class="menu__item" role="menuitem"> <a href="/en/mobility-nomination-and-registration" class="menu__link" target=""> NOMINATION AND REGISTRATION </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/mobility-study-programmes-and-courses" class="menu__link" target=""> STUDY PROGRAMMES AND COURSES </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/mobility-coordinators" class="menu__link" target=""> MOBILITY COORDINATORS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/your-mobility" class="menu__link" target=""> YOUR MOBILITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/mobility-accommodation" class="menu__link" target=""> ACCOMMODATION </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/mobility-contact" class="menu__link" target=""> CONTACT </a> </li>
+														 </ul>
+													<ul data-menu="submenu-236" id="submenu-236" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="CAMPUS">
+														<li class="menu__item" role="menuitem"> <a href="/en/candidates-zone/campus/map-of-the-university-of-lodz" class="menu__link" target=""> MAP OF THE UNIVERSITY OF LODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/campus/university-of-lodz-library" class="menu__link" target=""> UNIVERSITY OF LODZ LIBRARY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/campus/dormitories" class="menu__link" target=""> DORMITORIES </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/campus/sport" class="menu__link" target=""> SPORT </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/campus/the-city" class="menu__link" target=""> THE CITY </a> </li>
+														 </ul>
+													<ul data-menu="submenu-243" id="submenu-243" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="GROWTH">
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/university-always-open" class="menu__link" target=""> UNIVERSITY - ALWAYS OPEN </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/talented-at-school-brilliant-at-the-university" class="menu__link" target=""> FROM SECONDARY SCHOOL TO UNILODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/student-science-clubs" class="menu__link" target=""> STUDENT SCIENCE CLUBS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/industrial-doctoral-programme" class="menu__link" target=""> INDUSTRIAL DOCTORAL PROGRAMME </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/domestic-mobility" class="menu__link" target=""> DOMESTIC MOBILITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/international-mobility" class="menu__link" target=""> INTERNATIONAL MOBILITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/growth/languages" class="menu__link" target=""> LANGUAGES </a> </li>
+														 </ul>
+													<ul data-menu="submenu-2527" id="submenu-2527" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="SUPPORT">
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/support/scholarships" class="menu__link" target=""> SCHOLARSHIPS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/support/support-for-prospective-students-with-disabilities" class="menu__link" target=""> SUPPORT FOR PROSPECTIVE STUDENTS WITH DISABILITIES </a> </li>
+														 </ul>
+													<ul data-menu="submenu-383" id="submenu-383" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="COMMUNITY">
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/community/radio-of-the-university-of-lodz" class="menu__link" target=""> RADIO OF THE UNIVERSITY OF LODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/community/students-government" class="menu__link" target=""> STUDENTS&#039; GOVERNMENT </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/community/social-media" class="menu__link" target=""> SOCIAL MEDIA </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/community/student-organisations" class="menu__link" target=""> STUDENT ORGANISATIONS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/prospective-student-zone/community/unilodz-store" class="menu__link" target=""> UNILODZ STORE </a> </li>
+														 </ul>
+													 </div>
+												 </div>
+											<div class="megamenu-slider-item" data-ajax-lang="1" data-ajax-uid="37">
+												<div class="megamenu-slider-show-all"> <a href="/en/prospective-student-zone/news" class="megamenu-slider-show-all__link button button--red-white" target=""> See all <span class="sr-only">News</span> </a> </div>
+												<div class="megamenu-slider-item__preloader"></div>
+												 </div>
+											 </div>
+										 </li>
+									<li class="header__menu-item multiportal-menu-wrapper"> <a href="#" class="header__menu-item-link header__menu-item-link--hasChilds"> University </a>
+										<div class="megamenu">
+											<div class="megamenu__nav menu">
+												<div class="menu__wrap">
+													<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="Pierwszy poziom podmenu">
+														<li class="menu__item" role="menuitem"> <a href="/en/news" class="menu__link menu__link_content_type_news" target=""> NEWS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/events" class="menu__link menu__link_content_type_events" target=""> EVENTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-2769" aria-owns="submenu-2769" href="#"> SCIENCE AND RESEARCH </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-209" aria-owns="submenu-209" href="#"> ABOUT THE UNIVERSITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-1731" aria-owns="submenu-1731" href="#"> FACULTIES AND UNITS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/unic" class="menu__link menu__link_content_type_" target=""> UNIC </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-4697" aria-owns="submenu-4697" href="#"> SOCIAL COMMITTMENT </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/the-1st-rector-of-the-university-of-lodz-prof-tadeusz-kotarbinski-award" class="menu__link menu__link_content_type_" target=""> PROF. TADEUSZ KOTARBIŃSKI AWARD </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/sport-at-unilodz" class="menu__link menu__link_content_type_" target=""> SPORT AT #UNILODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/career" class="menu__link menu__link_content_type_" target=""> CAREER </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-8554" aria-owns="submenu-8554" href="#"> FOR THE MEDIA </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-210" aria-owns="submenu-210" href="#"> COOPERATION </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/1945-2025-80-years-of-the-university-of-lodz" class="menu__link menu__link_content_type_" target=""> 1945 – 2025 | 80 YEARS OF THE UNIVERSITY OF LODZ </a> </li>
+														 </ul>
+													<ul data-menu="submenu-2769" id="submenu-2769" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="SCIENCE AND RESEARCH">
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/science-and-research-at-unilodz" class="menu__link" target=""> SCIENCE AND RESEARCH AT UNILODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/science-inspires" class="menu__link" target=""> SCIENCE INSPIRES </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/unilodz-idub" class="menu__link" target=""> #UNILODZ IDUB INTERNAL GRANTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="https://son.uni.lodz.pl/" class="menu__link" target="_blank"> UNIVERSITY ACHIEVEMENT INFORMATION SYSTEM SCIENCEON </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/research-areas" class="menu__link" target=""> RESEARCH AREAS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/international-researchers" class="menu__link" target=""> WELCOME POINT FOR INTERNATIONAL RESEARCHERS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/young-scientists-development-council" class="menu__link" target=""> YOUNG SCIENTISTS DEVELOPMENT COUNCIL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/scientific-centres" class="menu__link" target=""> SCIENTIFIC CENTRES </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/publishing-and-sharing-scientific-content" class="menu__link" target=""> PUBLISHING AND SHARING SCIENTIFIC CONTENT </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/science-and-research/horizontal-contact-point-for-central-poland" class="menu__link" target=""> HORIZONTAL CONTACT POINT FOR CENTRAL POLAND </a> </li>
+														 </ul>
+													<ul data-menu="submenu-209" id="submenu-209" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="ABOUT THE UNIVERSITY">
+														<li class="menu__item" role="menuitem"> <a href="/en/aboutus" class="menu__link" target=""> ABOUT US </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/mission-vision-values-strategy" class="menu__link" target=""> MISSION, VISION, VALUES, STRATEGY </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-209-27" aria-owns="submenu-209-27" href="#">UL AUTHORITIES</a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-209-4983" aria-owns="submenu-209-4983" href="#">COUNCILS</a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-209-17317" aria-owns="submenu-209-17317" href="#">EUROPEAN UNIVERSITY OF CITIES IN POST-INDUSTRIAL TRANSITION (UNIC 2.0)</a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/employees" class="menu__link" target=""> UL EMPLOYEES </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/rectors-lecture-series" class="menu__link" target=""> RECTOR&#039;S LECTURE SERIES </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-209-7949" aria-owns="submenu-209-7949" href="#">HISTORY OF THE UNIVERSITY OF LODZ</a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/hr-excellence-in-research" class="menu__link" target=""> HR EXCELLENCE IN RESEARCH </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/translate-to-english-o-uniwersytecie/campus-and-infrastructure" class="menu__link" target=""> CAMPUS AND INFRASTRUCTURE </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/visual-identification" class="menu__link" target=""> VISUAL IDENTIFICATION </a> </li>
+														 </ul>
+													<ul data-menu="submenu-209-27" id="submenu-209-27" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="UL AUTHORITIES">
+														<li class="menu__item" role="menuitem"> <a href="/en/wladze/rectors-board" class="menu__link" target=""> RECTOR&#039;S BOARD </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/ul-authorities/ul-council" class="menu__link" target=""> THE UNIVERSITY OF LODZ COUNCIL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/ul-authorities/translate-to-english-senat" class="menu__link" target=""> SENATE </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/ul-authorities/rectors-representatives" class="menu__link" target=""> RECTOR&#039;S REPRESENTATIVES </a> </li>
+														 </ul>
+													<ul data-menu="submenu-209-4983" id="submenu-209-4983" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="COUNCILS">
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/councils/ombudsmen" class="menu__link" target=""> OMBUDSMEN </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/wydzialy-i-jednostki/young-scientists-development-council" class="menu__link" target=""> YOUNG SCIENTISTS DEVELOPMENT COUNCIL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/councils/equality-council" class="menu__link" target=""> EQUALITY COUNCIL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/councils/climate-and-environmental-policy-council" class="menu__link" target=""> CLIMATE AND ENVIRONMENTAL POLICY COUNCIL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/councils/generative-ai-team-at-the-university-of-lodz" class="menu__link" target=""> GENERATIVE AI TEAM AT THE UNIVERSITY OF LODZ </a> </li>
+														 </ul>
+													<ul data-menu="submenu-209-17317" id="submenu-209-17317" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="EUROPEAN UNIVERSITY OF CITIES IN POST-INDUSTRIAL TRANSITION (UNIC 2.0)">
+														<li class="menu__item" role="menuitem"> <a href="/en/unic/unic-vip-fund" class="menu__link" target=""> UNIC VIP FUND </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/unic/unic-expert-voices-fund" class="menu__link" target=""> UNIC EXPERT VOICES FUND </a> </li>
+														 </ul>
+													<ul data-menu="submenu-209-7949" id="submenu-209-7949" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="HISTORY OF THE UNIVERSITY OF LODZ">
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/history-of-the-university-of-lodz/rectors-of-the-university-of-lodz" class="menu__link" target=""> RECTORS OF THE UNIVERSITY OF LODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/history/prof-teodor-mieczyslaw-vieweger-and-academic-lodz-before-1945" class="menu__link" target=""> PROF. TEODOR MIECZYSŁAW VIEWEGER AND ACADEMIC LODZ BEFORE 1945 </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/about-the-university/history-of-the-university-of-lodz/a-note-on-the-value-of-science" class="menu__link" target=""> &quot;A NOTE ON THE VALUE OF SCIENCE&quot; </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="https://www.palac.uni.lodz.pl/en/" class="menu__link" target=""> ALFRED BIEDERMANN&#039;S PALACE </a> </li>
+														 </ul>
+													<ul data-menu="submenu-1731" id="submenu-1731" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="FACULTIES AND UNITS">
+														<li class="menu__item" role="menuitem"> <a href="/en/ul-faculties-and-units" class="menu__link" target=""> FACULTIES AND UNITS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/faculties-and-units/scientific-centres-and-research-teams" class="menu__link" target=""> SCIENTIFIC CENTRES AND RESEARCH TEAMS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="https://www.lib.uni.lodz.pl/en/library" class="menu__link" target=""> UNIVERSITY OF LODZ LIBRARY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/lodz-university-press" class="menu__link" target=""> LODZ UNIVERSITY PRESS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/faculties-and-units/university-of-lodz-kindergarten" class="menu__link" target=""> UNIVERSITY OF LODZ KINDERGARTEN </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/faculties-and-units/british-international-school-of-the-university-of-lodz" class="menu__link" target=""> BRITISH INTERNATIONAL SCHOOL OF THE UNIVERSITY OF LODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/faculties-and-units/state-secondary-school-of-the-university-of-lodz" class="menu__link" target=""> STATE SECONDARY SCHOOL OF THE UNIVERSITY OF LODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/faculties-and-units/polish-language-centre-for-foreigners" class="menu__link" target=""> POLISH LANGUAGE CENTRE FOR FOREIGNERS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="https://www.chorakademicki.uni.lodz.pl/en/" class="menu__link" target=""> UNIVERSITY OF LODZ CHOIR </a> </li>
+														 </ul>
+													<ul data-menu="submenu-4697" id="submenu-4697" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="SOCIAL COMMITTMENT">
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-4697-18647" aria-owns="submenu-4697-18647" href="#">SUPPORT AT UNILODZ</a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-4697-1325" aria-owns="submenu-4697-1325" href="#">SOCIAL COMMITMENT</a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/gender-equality-plan" class="menu__link" target=""> GENDER EQUALITY PLAN </a> </li>
+														 </ul>
+													<ul data-menu="submenu-4697-18647" id="submenu-4697-18647" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="Support at UniLodz">
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/support-at-unilodz" class="menu__link" target=""> UNILODZ UNIFIED </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/student-zone/support/academic-support-centre" class="menu__link" target=""> SUPPORT AND ACCESSIBILITY CENTRE (FORMERLY ACADEMIC SUPPORT CENTRE) </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/support-at-unilodz/what-is-mobbing-and-how-to-combat-it" class="menu__link" target=""> WHAT IS MOBBING AND HOW TO COMBAT IT? </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/support-at-unilodz/what-is-discrimination-and-how-to-combat-it" class="menu__link" target=""> WHAT IS DISCRIMINATION AND HOW TO COMBAT IT? </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/support-at-unilodz/what-is-harassment-and-how-to-combat-it" class="menu__link" target=""> WHAT IS HARASSMENT AND HOW TO COMBAT IT? </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/unilodz-discrimination-free-zone/support-for-the-university-of-lodz-transgender-and-non-binary-students-and-doctoral-students" class="menu__link" target=""> SUPPORT FOR THE UNIVERSITY OF LODZ TRANSGENDER AND NON-BINARY STUDENTS AND DOCTORAL STUDENTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/razem/who-to-contact" class="menu__link" target=""> WHO TO CONTACT? </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/support-at-unilodz/workshops-and-training-on-non-discrimination-and-diversity-management" class="menu__link" target=""> WORKSHOPS AND TRAINING ON NON-DISCRIMINATION AND DIVERSITY MANAGEMENT </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/support-at-unilodz/specialised-counselling" class="menu__link" target=""> SPECIALISED COUNSELLING </a> </li>
+														 </ul>
+													<ul data-menu="submenu-4697-1325" id="submenu-4697-1325" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="SOCIAL COMMITMENT">
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/university-diversity" class="menu__link" target=""> UNIVERSITY DIVERSITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/university-stands-for-diversity" class="menu__link" target=""> UNIVERSITY STANDS FOR DIVERSITY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/flowers-no-thank-you" class="menu__link" target=""> FLOWERS? NO, THANK YOU! </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/psia-kosc-dogs-bone" class="menu__link" target=""> PSIA KOŚĆ [DOG&#039;S BONE] </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/social-committment/bookcrossing-at-the-university-of-lodz" class="menu__link" target=""> BOOKCROSSING AT THE UNIVERSITY OF LODZ </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/university-of-lodz-for-ukraine" class="menu__link" target=""> UNIVERSITY OF LODZ FOR UKRAINE 🇺🇦 </a> </li>
+														 </ul>
+													<ul data-menu="submenu-8554" id="submenu-8554" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="FOR THE MEDIA">
+														<li class="menu__item" role="menuitem"> <a href="/en/media/get-familiar-with-the-university-of-lodz-experts-and-their-specialisations" class="menu__link" target=""> GET FAMILIAR WITH THE UNIVERSITY OF LODZ EXPERTS AND THEIR SPECIALISATIONS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/media/the-university-of-lodz-press-breakfasts" class="menu__link" target=""> THE UNIVERSITY OF LODZ PRESS BREAKFASTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/media-1" class="menu__link" target=""> MORE ABOUT THE UNIVERSITY OF LODZ </a> </li>
+														 </ul>
+													<ul data-menu="submenu-210" id="submenu-210" class="menu__level menu__level-2" tabindex="-1" role="menu" aria-label="COOPERATION">
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/cooperation-at-ul" class="menu__link" target=""> COOPERATION AT UL </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/employer-zone" class="menu__link" target=""> EMPLOYER ZONE </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="https://www.ctt.uni.lodz.pl/en/" class="menu__link" target=""> TECHNOLOGY TRANSFER </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-210-1066" aria-owns="submenu-210-1066" href="#">SCHOOLS</a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/i-want-to-cooperate/space-rental" class="menu__link" target=""> SPACE RENTAL </a> </li>
+														<li class="menu__item" role="menuitem"> <a class="menu__link" data-submenu="submenu-210-1081" aria-owns="submenu-210-1081" href="#">I WANT TO COOPERATE</a> </li>
+														 </ul>
+													<ul data-menu="submenu-210-1066" id="submenu-210-1066" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="SCHOOLS">
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/schools" class="menu__link" target=""> UL FOR SCHOOLS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/schools/university-always-open" class="menu__link" target=""> UNIVERSITY ALWAYS OPEN </a> </li>
+														 </ul>
+													<ul data-menu="submenu-210-1081" id="submenu-210-1081" class="menu__level menu__level-3" tabindex="-1" role="menu" aria-label="I WANT TO COOPERATE">
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/i-want-to-cooperate/ul-experts" class="menu__link" target=""> UL EXPERTS </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/i-want-to-cooperate/traineeships/internships/work" class="menu__link" target=""> TRAINEESHIPS / INTERNSHIPS / WORK </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/i-want-to-cooperate/offer-of-the-university-of-lodz-library" class="menu__link" target=""> OFFER OF THE UNIVERSITY OF LODZ LIBRARY </a> </li>
+														<li class="menu__item" role="menuitem"> <a href="/en/cooperation/i-want-to-cooperate/offer-of-the-lodz-university-press" class="menu__link" target=""> OFFER OF THE LODZ UNIVERSITY PRESS </a> </li>
+														 </ul>
+													 </div>
+												 </div>
+											<div class="megamenu-slider-item" data-ajax-lang="1" data-ajax-uid="26">
+												<div class="megamenu-slider-show-all"> <a href="/en/news" class="megamenu-slider-show-all__link button button--red-white" target=""> See all <span class="sr-only">News</span> </a> </div>
+												<div class="megamenu-slider-item__preloader"></div>
+												 </div>
+											 </div>
+										 </li>
+									 </ul>
+								 </div>
+							<form class="" name="form_login" id="form_login" method="post"><input type="submit" class="header__login" value="Log in" name="login"></form>
+							<button aria-controls="megamenuSearch" aria-expanded="false" id="searchButton" class="header__search"><span class="sr-only">Wyszukiwarka</span><span id="searchButtonIcon" class="header__search-icon" aria-hidden="true"></span></button>
+							<div id="megamenuSearch" class="megamenuSearch">
+								<div class="megamenuSearch__content">
+									<div class="megamenuSearch__field">
+										<form class="searchbox-form" action="/en/search-results" name="form_kesearch_searchfield" method="get"><label for="header-search" class="megamenuSearch__label">How can we <span class="megamenuSearch__label-highlighted">help You?</span></label>
+											<div class="megamenuSearch__input-wrapper"><input type="hidden" name="id" value="91"><input type="text" placeholder="Enter a search phrase:" value="" required autocomplete="off" name="tx_kesearch_pi1[sword]" class="megamenuSearch__input" id="header-search" data-ajax-lang="1"><span class="megamenuSearch__input-wrapper-icon" aria-hidden="true"></span></div>
+										</form>
+									</div>
+									<div class="megamenuSearch__searched">
+										<p class="megamenuSearch__searched-text"> Most searched phrases: </p>
+										<ul class="megamenuSearch__searched-list">
+											<li class="megamenuSearch__searched-item"> <a href="/en/prospective-student-zone/admission" class="megamenuSearch__searched-link" id="mostpopular-search-item-6"> rekrutacja </a> </li>
+											<li class="megamenuSearch__searched-item"> <a href="/en/prospective-student-zone/admission/doctoral-schools" class="megamenuSearch__searched-link" id="mostpopular-search-item-8"> szkoły doktorskie rekrutacja </a> </li>
+											<li class="megamenuSearch__searched-item"> <a href="/en/strefa-kandydata/oferta-studiow/i-stopnia" class="megamenuSearch__searched-link" id="mostpopular-search-item-9"> kierunki studiów I stopień </a> </li>
+											<li class="megamenuSearch__searched-item"> <a href="/en/strefa-kandydata/oferta-studiow/ii-stopnia" class="megamenuSearch__searched-link" id="mostpopular-search-item-10"> kierunki studiów II stopień </a> </li>
+											<li class="megamenuSearch__searched-item"> <a href="/en/prospective-student-zone/admission/international-students-to-full-time-studies" class="megamenuSearch__searched-link" id="mostpopular-search-item-11"> kandydaci z zagranicy </a> </li>
+											 </ul>
+										 </div>
+								</div>
+							</div>
+							<button aria-controls="mainMenuWrapper" aria-expanded="false" id="burgerButton" class="header__burger"><span class="sr-only">Menu</span><span class="header__burger-line"></span><span class="header__burger-line"></span><span class="header__burger-line"></span></button>
+							<button id="heros-select-close" class="header__select-close"><span class="sr-only">Zamknij select</span></button>
+						</div>
+					</div>
+				</nav>
+				<div class="header-breadcrumb type-breadcrumb-2" aria-labelledby="breadcrumb">
+					<p class="sr-only" id="breadcrumb">You are here:</p>
+					<ul>
+						<li ><a href="/en/"> UNIVERSITY OF LODZ </a></li>
+						<li ><a href="/en/prospective-student-zone"> PROSPECTIVE STUDENT ZONE </a></li>
+						<li aria-current="page"><span tabindex="0"> MOBILITY </span></li>
+					</ul>
+				</div>
+				<div class="hero hero--subpage-last ">
+					<div class="hero__logo-wrapper"><a class="hero__main-logo-wrapper" href="/en/"><img class="hero__logo" src="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Images/Logo/logo_UL_white.png" alt="Logotyp Uniwersytetu Łódzkiego"></a>
+						<div class="hero__logos"></div>
+					</div>
+				</div>
+			</header>
+			<main id="page-content"><a id="site-main-content" tabindex="-1"></a>
+				<!--TYPO3SEARCH_begin-->
+				<div class="section-subpage-last">
+					<div class="search-results__search employee-zone-profile recruitment-page-b section-subpage-last__header">
+						<div class="megamenuSearch__content">
+							<div class="megamenuSearch__field">
+								<div class="personal-card__wrapper">
+									<h1 class="section-header"><span class="text-highlighted">MOBILITY</span></h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a id="c107300"></a>
+					<div class="sub-nav__contener">
+						<div class="sub-nav__wrapper sub-nav__wrapper--static smooth-slide">
+							<div class="sticky-sub-nav">
+								<button class="slick-prev slick-arrow" aria-label="Przewiń slajder do tyłu" type="button"></button>
+								<nav class="submenu">
+									<ul class="submenu__list">
+										<li class="submenu__nav-item"><a href="#c107324">MOBILITY COORDINATORS</a></li>
+										<li class="submenu__nav-item"><a href="#c120658">INFO SHEET</a></li>
+										<li class="submenu__nav-item"><a href="#c107337">STUDY PROGRAMMES AND COURSES</a></li>
+										<li class="submenu__nav-item"><a href="#c107302">NOMINATION OF MOBILITY STUDENTS</a></li>
+										<li class="submenu__nav-item"><a href="#c107318">ACADEMIC CALENDAR</a></li>
+										<li class="submenu__nav-item"><a href="#c107348">CONTACT</a></li>
+									</ul>
+								</nav>
+								<button class="slick-next slick-arrow" aria-label="Przewiń slajder do przodu" type="button"></button>
+							</div>
+						</div>
+					</div>
+					<div class="sub-nav__contener sub-nav__contener--sticky">
+						<div class="sub-nav__wrapper sub-nav__wrapper--sticky smooth-slide">
+							<div class="sticky-sub-nav">
+								<button class="slick-prev slick-arrow" aria-label="Przewiń slajder do tyłu" type="button"></button>
+								<nav class="submenu">
+									<ul class="submenu__list">
+										<li class="submenu__nav-item"><a href="#c107324">MOBILITY COORDINATORS</a></li>
+										<li class="submenu__nav-item"><a href="#c120658">INFO SHEET</a></li>
+										<li class="submenu__nav-item"><a href="#c107337">STUDY PROGRAMMES AND COURSES</a></li>
+										<li class="submenu__nav-item"><a href="#c107302">NOMINATION OF MOBILITY STUDENTS</a></li>
+										<li class="submenu__nav-item"><a href="#c107318">ACADEMIC CALENDAR</a></li>
+										<li class="submenu__nav-item"><a href="#c107348">CONTACT</a></li>
+									</ul>
+								</nav>
+								<button class="slick-next slick-arrow" aria-label="Przewiń slajder do przodu" type="button"></button>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__content "><a id="c107324"></a>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<h2 class="section-header "> MOBILITY COORDINATORS </h2>
+									<div class="text-regular">
+										<p>At the University of Lodz there is a <strong>Mobility Coordinator</strong> at&nbsp;each faculty. Such person&nbsp;is responsible for contact with partner universities (e.g. signing agreements) and taking care of mobility students. To view list of Mobility Coordinators, please follow the link below and choose faculty of your interest:</p>
+									</div>
+								</div>
+							</div>
+							<ul class="buttons-group__list ">
+								<li class="buttons-group__list-item"><a href="/en/mobility-coordinators" target="_blank" class="button button--no-uppercase button--red-white"> MOBILITY COORDINATORS </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__content "><a id="c120658"></a>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<h2 class="section-header "> INFO SHEET </h2>
+									<div class="text-regular">
+										<p><a href="/fileadmin/Jednostki/BWZ/incoming-students/PL_LODZ01_Info_sheet_11.2024.pdf" target="_blank">PL_LODZ01_Info_sheet_11.2024</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__content "><a id="c107337"></a>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<h2 class="section-header "> STUDY PROGRAMMES AND COURSES </h2>
+									<div class="text-regular">
+										<p>University of Lodz offers wide choice of courses available to mobility students. Majority of them is taught in English. For details, please follow the link below and choose specific faculty:</p>
+									</div>
+								</div>
+							</div>
+							<ul class="buttons-group__list ">
+								<li class="buttons-group__list-item"><a href="/en/mobility-study-programmes-and-courses" target="_blank" class="button button--no-uppercase button--red-white"> STUDY PROGRAMMES AND COURSES </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__content "><a id="c107302"></a>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<h2 class="section-header "> NOMINATION OF MOBILITY STUDENTS </h2>
+									<div class="text-regular">
+										<p>Dear colleagues from partner universities, please know that nomination deadlines are as follows:</p>
+										<ul class="list-normal">
+											<li>winter semester/full year: 24 April</li>
+											<li>summer semester: 24 October</li>
+										</ul>
+										<p>To nominate your students, please send an email to <a href="mailto:iso@uni.lodz.pl">iso@uni.lodz.pl</a>&nbsp;</p>
+										<p>More information on nomination and registration is available here:&nbsp;<a href="/en/mobility-nomination-and-registration" target="_blank">uni.lodz.pl/en/mobility-nomination-and-registration</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__content "><a id="c107318"></a>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<h2 class="section-header "> ACADEMIC CALENDAR </h2>
+									<div class="text-regular"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a id="c107320"></a>
+					<div class="section">
+						<div class="section__content "><a id="copy-556-c17369"></a>
+							<div class="textpic textpic-above">
+								<div class="textpic-item textpic-gallery"></div>
+								<div class="textpic-item textpic-text">
+									<div class="text-regular">
+										<p>Faculty inaugurations, examination sessions, breaks between the semesters and the Rector’s days – check important dates that are worth remembering by the #UniLodz community.</p>
+										<p>&nbsp;</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a id="copy-556-c382551"></a>
+					<div class="section">
+						<div class="section__content">
+							<h2 class="section-header"><span class="text-highlighted">ACADEMIC</span> YEAR 2025/2026 </h2>
+							<div class="accordion" id="faq-382551">
+								<div class="card">
+									<div class="card-header" id="heading-382551-540530">
+										<h3 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#slidedown-382551-540530" aria-expanded="false" aria-controls="slidedown-382551-540530"><span class="btn-icon" aria-hidden="true"></span><span class="btn-text"> The 1st semester (winter/fall semester) lasts from 1 October 2025 to 22 February 2026 </span></button>
+										</h3>
+									</div>
+									<div id="slidedown-382551-540530" class="collapse" aria-labelledby="heading-382551-540530" data-bs-parent="#faq-382551">
+										<div class="card-body">
+											<ol>
+												<li>The official inauguration of the academic year takes place on 1 October 2025.</li>
+												<li>Inauguration of the academic year at the Faculties should take place until 1 October 2025.</li>
+												<li>Didactic classes start on 2 October 2025 and last until 25 January 2026.</li>
+												<li>Days off from the didactic classes are, as follows:
+													<ul>
+														<li>31 October 2025 – Rector’s day;</li>
+														<li>2 November 2025 – Rector’s day;</li>
+														<li>from 23 December 2025 until 6 January 2026 – winter holiday break;</li>
+														<li>from 9&nbsp;to 15&nbsp;February 2026 – break between the semesters.</li>
+													</ul>
+												</li>
+												<li>Examination sessions in the winter semester take place on the following dates:
+													<ul>
+														<li>from 26 January&nbsp;to 8&nbsp;February 2026 – winter examination session;</li>
+														<li>from 16 to 22&nbsp;February&nbsp;2026 – winter make-up examination session.</li>
+													</ul>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="heading-382551-540532">
+										<h3 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#slidedown-382551-540532" aria-expanded="false" aria-controls="slidedown-382551-540532"><span class="btn-icon" aria-hidden="true"></span><span class="btn-text"> The 2nd semester (summer/spring semester) lasts from 23 February 2026 to 30 September 2026 </span></button>
+										</h3>
+									</div>
+									<div id="slidedown-382551-540532" class="collapse" aria-labelledby="heading-382551-540532" data-bs-parent="#faq-382551">
+										<div class="card-body">
+											<ol>
+												<li>Didactic classes start on 23 February&nbsp;and last until 14&nbsp;June 2026.</li>
+												<li>Days off from the classes are, as follows:
+													<ul>
+														<li>from 1 to 7&nbsp;April 2026&nbsp;– Easter holiday break;</li>
+														<li>2 May 2025 – Rector’s day;</li>
+														<li>one May Friday – might be declared the Rector’s day due to Juwenalia (students' festival);</li>
+														<li>25&nbsp;May 2026&nbsp;– Rector’s day, due to the Celebration Day of the University of Lodz;</li>
+														<li>5 June 2026&nbsp;– Rector’s day.</li>
+													</ul>
+												</li>
+												<li>Examination sessions in the summer semester take place on the following dates:
+													<ul>
+														<li>from 15 June to 5 July 2026&nbsp;– summer examination session;</li>
+														<li>from 6 July to 30 September 2026 – break for summer holidays, scientific camps, internships, etc.</li>
+														<li>dates of final assessments and examinations during autumn examination session taking place in September are determined by the Dean.</li>
+													</ul>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="heading-382551-540535">
+										<h3 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#slidedown-382551-540535" aria-expanded="false" aria-controls="slidedown-382551-540535"><span class="btn-icon" aria-hidden="true"></span><span class="btn-text"> Complete regulation on the academic year 2025/2026 </span></button>
+										</h3>
+									</div>
+									<div id="slidedown-382551-540535" class="collapse" aria-labelledby="heading-382551-540535" data-bs-parent="#faq-382551">
+										<div class="card-body">
+											<p>You can download the full regulation from the file:&nbsp;<a href="/fileadmin/Jednostki/BWZ/inne/Regulation_No._148_of_the_UL_Rector_of_5_May_2025_-_zarz._nr_148_z_5.05.2025_r._EN.pdf" target="_blank">Regulation No. 148 of the UL Rector of 5 May 2025</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a id="copy-556-c308541"></a>
+					<div class="section">
+						<div class="section__content">
+							<h2 class="section-header"><span class="text-highlighted">ACADEMIC</span> YEAR 2024/2025 </h2>
+							<div class="accordion" id="faq-308541">
+								<div class="card">
+									<div class="card-header" id="heading-308541-398516">
+										<h3 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#slidedown-308541-398516" aria-expanded="false" aria-controls="slidedown-308541-398516"><span class="btn-icon" aria-hidden="true"></span><span class="btn-text"> The 1st semester (winter semester) lasts from 1 October 2024 to 2 March 2025 </span></button>
+										</h3>
+									</div>
+									<div id="slidedown-308541-398516" class="collapse" aria-labelledby="heading-308541-398516" data-bs-parent="#faq-308541">
+										<div class="card-body">
+											<ol>
+												<li>The <strong>official inauguration</strong> of the academic year takes place on 2 October 2024.</li>
+												<li>Inauguration of the academic year at the Faculties should take place until 1&nbsp;October 2024.</li>
+												<li><strong>Didactic classes</strong> start on 3 October 2024 and last until 2&nbsp;February 2025.</li>
+												<li><strong>Days off</strong> from the didactic classes are, as follows:
+													<ul>
+														<li>31 October 2024 – Rector’s day</li>
+														<li>2 November 2024 – Rector’s day</li>
+														<li>from 23&nbsp;December 2024 until 6&nbsp;January 2025 – winter holiday break</li>
+														<li>from 17&nbsp;to 23&nbsp;February 2025 – break between the semesters.</li>
+													</ul>
+												</li>
+												<li><strong>Examination sessions</strong> in the winter semester take place on the following dates:
+													<ul>
+														<li>from 3 to 16&nbsp;February 2025 – winter examination session</li>
+														<li>from 24 February to 2&nbsp;March&nbsp;2025 – winter make-up examination session.</li>
+													</ul>
+												</li>
+											</ol>
+											<p>The Faculty Deans may decide to start the summer semester up to one week earlier. This change cannot affect settlement of absences in the Individual Teaching Load Card (KIOD).</p>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="heading-308541-398519">
+										<h3 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#slidedown-308541-398519" aria-expanded="false" aria-controls="slidedown-308541-398519"><span class="btn-icon" aria-hidden="true"></span><span class="btn-text"> The 2nd semester (summer semester) lasts from 3 March to 30 September 2025 </span></button>
+										</h3>
+									</div>
+									<div id="slidedown-308541-398519" class="collapse" aria-labelledby="heading-308541-398519" data-bs-parent="#faq-308541">
+										<div class="card-body">
+											<ol>
+												<li><strong>Didactic classes</strong> start on 3 March&nbsp;and last until 15 June 2025.</li>
+												<li><strong>Days off</strong> from the classes are, as follows:
+													<ul>
+														<li>from 16 to 22 April 2025 – Easter holiday break</li>
+														<li>2 May 2025 – Rector’s day</li>
+														<li>one May Friday – might be declared the Rector’s day due to Juwenalia (students' festival)</li>
+														<li>26 May 2025 – Rector’s day due to the Celebration Day of the University of Lodz.</li>
+													</ul>
+												</li>
+												<li><strong>Examination sessions</strong> in the summer semester take place on the following dates:
+													<ul>
+														<li>from 16 June to 8 July 2025 (except 20 June) – summer examination session</li>
+														<li>from 9 July to 30 September 2025 – break for summer holidays, scientific camps, internships, etc.</li>
+														<li>dates of final assessments and examinations during autumn examination session taking place in September are determined by the Dean.</li>
+													</ul>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" id="heading-308541-412938">
+										<h3 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse" data-bs-target="#slidedown-308541-412938" aria-expanded="false" aria-controls="slidedown-308541-412938"><span class="btn-icon" aria-hidden="true"></span><span class="btn-text"> Complete regulation on the academic year 2024/2025 </span></button>
+										</h3>
+									</div>
+									<div id="slidedown-308541-412938" class="collapse" aria-labelledby="heading-308541-412938" data-bs-parent="#faq-308541">
+										<div class="card-body"></div>
+										<h2 class="section-header"><span class="text-highlighted">Files</span> to download </h2>
+										<div class="download-list-wrapper">
+											<ul class="download-list">
+												<li class="download-list__file"><a href="/fileadmin/Jednostki/BWZ/inne/Regulation_No._91_of_the_UL_Rector_of_20_May_2024_EN.pdf" class="files__file-link ext-pdf" title="Regulation_No._91_of_the_UL_Rector_of_20_May_2024_EN.pdf" target="_blank"> Regulation on academic year 2024-25 <span class="file-size-info text-regular"> (243 KB)</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section__content "><a id="c107348"></a>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<h2 class="section-header "> CONTACT </h2>
+									<div class="text-regular"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a id="c107353"></a>
+					<div class="section">
+						<div class="section__content "><a id="copy-498-c93541"></a>
+							<div class="related-locations">
+								<div class="embed-container map-section" id="mapid_93541" style="height: 300px;"></div>
+								<script>
+                    if (typeof(maps) == 'undefined')
+                        var maps = [];
+                    var icon = "/typo3conf/ext/inv_ul_structure/Resources/Public/Css/images/marker-icon-E5231B.png";
+                    var tiles = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+                    var popupBody = '';
+                    var uid = '93541';
+                    var title = '';
+                    var locations = JSON.parse('[{"City":"90-136 \u0141\u00f3d\u017a","Address":"Uniwersytecka 3","Description":"0","Longitude":"19.474335","Latitude":"51.772969","RoomNumber":"room 1-8"}]');
+                    maps[uid] = {
+                        title: title,
+                        mapid: 'mapid_' + uid,
+                        locations: locations,
+                        markers: []
+                    };
+                    window.onload = function() {
+                        for(var id in maps) {
+                            maps[id].mymap = L.map(maps[id].mapid);
+                            maps[id].mymap.scrollWheelZoom.disable()
+                            maps[id].mymap.on('click', function() { this.scrollWheelZoom.enable() });
+                            maps[id].mymap.on('mouseout', function() { this.scrollWheelZoom.disable()});
+                            L.tileLayer.grayscale(tiles, {
+                              attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                            }).addTo(maps[id].mymap);
+                            for (var i in maps[id].locations) {
+                                popupBody = '\n\
+                                    <div id="siteNotice"></div>\n\
+                                    <div class="map-location-heading">' + title + '</div>\n\
+                                    <div id="bodyConent"><p>'
+                                    + maps[id].locations[i].Address + '</p><p>'
+                                    + maps[id].locations[i].City + '</p>'
+                                    + ( maps[id].locations[i].RoomNumber ? '<p>' + maps[id].locations[i].RoomNumber + '</p>' : '' )
+                                    + '</div>';
+                                var marker = L.marker([maps[id].locations[i].Latitude, maps[id].locations[i].Longitude], {
+                                    title: title,
+                                    icon: L.icon({ iconUrl: icon, iconSize: [25,35], iconAnchor: [12,35]})
+                                });
+                                marker.bindPopup(popupBody).addTo(maps[id].mymap);
+                                maps[id].markers.push(marker);
+                            }
+                            var group = new L.featureGroup(maps[id].markers);
+                            maps[id].mymap.fitBounds(group.getBounds().pad(0.5));
+                        }
+                    }
+                </script>
+							</div>
+							<div class="textmedia textmedia-above">
+								<div class="textmedia-item textmedia-gallery"></div>
+								<div class="textmedia-item textmedia-text">
+									<div class="text-regular">
+										<p><strong>International Relations Office</strong> is located at 3 Uniwersytecka Str., 90-137 Lodz, Poland</p>
+										<p>Email: <a href="mailto:iso@uni.lodz.pl">iso@uni.lodz.pl</a></p>
+										<p>Phone: +48 42 635 4790</p>
+										<p>Incoming mobility students, if necessary, can visit the office in person (room no. 7).</p>
+										<p>To contact <strong>Mobility Coordinator</strong> (from the Faculty), please go to:&nbsp;<a href="https://www.uni.lodz.pl/en/mobility-coordinators" target="_blank">https://www.uni.lodz.pl/en/mobility-coordinators</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--TYPO3SEARCH_end-->
+			</main>
+			<footer id="page-footer" class="footer">
+				<div class="footer__content-wrapper lazy" data-src="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Images/Splash/background_mainpage_03.webp">
+					<div class="container-box">
+						<div class="footer__content">
+							<div class="footer__left-column">
+								<div id="c9758" class="frame frame-default frame-type-html frame-layout-0 frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
+									<div class="frame-container">
+										<div class="frame-inner"><img class="footer__ul-logo footer__ul-logo-override" alt="Logo of the University of Lodz" src="/fileadmin/user_upload/Serwis_glowny/Identyfikacja_UL/logotypy_EN_svg/UniLodz_en.svg"></div>
+									</div>
+								</div>
+								<a id="c9759"></a>
+								<div class="text-regular">
+									<p>UNIVERSITY OF LODZ</p>
+									<p>&nbsp;</p>
+									<p>Narutowicza 68, 90-136 LODZ</p>
+									<p>fax: 00 48 42/665 57 71, 00 48 42/635 40 43</p>
+									<p>NIP: 724 000 32 43</p>
+								</div>
+							</div>
+							<div class="footer__right-column">
+								<div id="c9762" class="frame frame-default frame-type-html frame-layout-0 frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
+									<div class="frame-container">
+										<div class="frame-inner">
+											<h3 class="footer__title">STAY IN TOUCH</h3>
+											<p class="footer__text">Follow #UniLodz on social media</p>
+										</div>
+									</div>
+								</div>
+								<a id="c9763"></a>
+								<div class="tx-inv-iconmenu">
+									<ul class="footer__social-media">
+										<li class="footer__social-media-item"><a class="footer__social-media-link fb" href="https://www.facebook.com/unilodz" target="_blank"><span class="sr-only">Facebook</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link " href="https://twitter.com/unilodz" target="_blank"><span class="sr-only">Twitter</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+													<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+													<g id="layer1_00000096752463234425836520000002125015719432077730_" transform="translate(52.390088,-25.058597)">
+														<path id="path1009_00000151502931213023518270000003231653307569171871_" class="st0" d="M-52.8,26.1l9.3,12.4l-9.3,10.1h2.1 l8.2-8.8l6.6,8.8h7.1l-9.8-13.1l8.7-9.4h-2.1l-7.5,8.1l-6.1-8.1H-52.8z M-49.7,27.7h3.3L-32,47h-3.3L-49.7,27.7z"></path>
+													</g></svg></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link insta" href="https://www.instagram.com/unilodz/" target="_blank"><span class="sr-only">Instagram</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link linkdIn" href="https://www.linkedin.com/school/unilodz/" target="_blank"><span class="sr-only">LinkedIn</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link yt" href="https://www.youtube.com/user/PromocjaUL" target="_blank"><span class="sr-only">YouTube</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link flickr" href="https://www.flickr.com/photos/promocja_ul/albums" target="_blank"><span class="sr-only">Flickr</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link soundcloud" href="https://soundcloud.com/unilodz" target="_blank"><span class="sr-only">SoundCloud</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link tiktok" href="https://www.tiktok.com/@unilodz" target="_blank"><span class="sr-only">Tik Tok</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link spotify" href="https://open.spotify.com/show/67Lhj0JOeofCbjyLhN1fnj" target="_blank"><span class="sr-only">Spotify</span></a></li>
+										<li class="footer__social-media-item"><a class="footer__social-media-link podcast" href="https://podcasts.apple.com/us/podcast/unilodz-podcasts/" target="_blank"><span class="sr-only">Podcast</span></a></li>
+									</ul>
+								</div>
+								<div id="c9764" class="frame frame-default frame-type-menu_pages frame-layout-0 frame-background-none frame-no-backgroundimage frame-space-before-none frame-space-after-none">
+									<div class="frame-container">
+										<div class="frame-inner">
+											<ul class="menu-pages-ul">
+												<li class="menu-pages-li"><a href="/en/about-the-website" class="menu-pages-a">ABOUT THE WEBSITE</a></li>
+												<li class="menu-pages-li"><a href="/en/unilodz-store" class="menu-pages-a">UNILODZ STORE</a></li>
+												<li class="menu-pages-li"><a href="/en/ul-faculties-and-units" class="menu-pages-a">FACULTIES AND UNITS</a></li>
+												<li class="menu-pages-li"><a href="/en/translate-to-english-mapa-strony" class="menu-pages-a">SITE MAPS</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="footer__bip-link footer__bip-link--right"><a id="c"></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__ue">
+					<div class="footer__ue-content"><a id="c115"></a>
+						<div class="tx-inv-iconmenu">
+							<ul class="footer__ue-list">
+								<li class="footer__ue-list-item"><a class="footer__ue-list-link " href="https://www.funduszeeuropejskie.gov.pl" target="_blank"><span class="sr-only">Fundusze Europejskie</span><img alt="Logotyp Funduszy Europejskich" src="/fileadmin/_processed_/7/1/csm_fe_3986a50f1e.png" width="160" height="60"></a></li>
+								<li class="footer__ue-list-item"><a class="footer__ue-list-link " href="https://www.gov.pl/" target="_blank"><span class="sr-only">Rzeczpospolita Polska</span><img alt="Flaga Rzeczypospolitej Polskiej" src="/typo3conf/ext/_processed_/1/f/csm_rp_4dd151b7fd.png" width="260" height="60"></a></li>
+								<li class="footer__ue-list-item"><a class="footer__ue-list-link " href="https://ec.europa.eu" target="_blank"><span class="sr-only">Unia Europejska EFS</span><img alt="Flaga Unii Europejskiej- Europejski Fundusz Społeczny" src="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/Images/ue.webp" width="298" height="60"></a></li>
+							</ul>
+						</div>
+						<a id="c9766"></a>
+						<div class="text-regular">
+							<p>The UŁ Multiportal project co-financed by the European Union funds as part of the NCBR competition</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<a class="scroll-top" title="Scroll to top" href="#top"><span class="scroll-top-icon"></span></a></div>
+		<div class="tx-om-cookie-consent">
+			<div class="om-cookie-panel" data-omcookie-panel="1">
+				<div class="cookie-panel__primary">
+					<div class="cookie-panel__selection">
+						<form>
+							<div class="cookie-panel__checkbox-wrap"> <input class="cookie-panel__checkbox cookie-panel__checkbox--state-inactiv" autocomplete="off" data-omcookie-panel-grp="1" id="group-1" type="checkbox" checked=1 data-omcookie-panel-essential="1" disabled="disabled" value="group-1"> <label for="group-1">Essential</label>
+								<p class="label-description">Essential cookies enable basic functions and are necessary for the website to function properly.</p>
+								 </div>
+							<div class="cookie-panel__checkbox-wrap"> <input class="cookie-panel__checkbox " autocomplete="off" data-omcookie-panel-grp="1" id="group-3" type="checkbox" value="group-3"> <label for="group-3">Analytics</label>
+								<p class="label-description">Statistics cookies collect information anonymously. This information helps us to understand how our visitors use our website.</p>
+								 </div>
+							 </form>
+						 </div>
+					 </div>
+				<div class="cookie-panel__secondary">
+					<div class="cookie-panel__description"> Our website uses cookie files (so-called cookies) for statistical, advertising and functional purposes. Thanks to them, we can customize the site to Your needs. Anyone can accept cookies or have the option to disable them in the browser, so that no information will be collected. </div>
+					<div class="cookie-panel__link"> Navigate to <a href="/en/privacy-policy"> Privacy Policy </a> </div>
+					<div class="cookie-panel__control">
+						<button data-omcookie-panel-save="all" class="cookie-panel__button cookie-panel__button--color--green"> Accept all </button>
+						<button data-omcookie-panel-save="min" class="cookie-panel__button">Accept only essential</button>
+						<button data-omcookie-panel-save="save" class="cookie-panel__button">Save and Close</button>
+						 </div>
+					 </div>
+				 </div>
+			<button class="cookie-manage__button" type="button" data-omcookie-panel-show> Open cookie settings </button>
+			 </div>
+		<script src="/typo3temp/assets/compressed/merged-5f31bbedd61219213e1f4bba18671e9b.js?1751227577"></script>
+		<script src="https://www.googletagmanager.com/gtag/js?id=G-1MY3DVGPWR" async="async"></script>
+		<script src="/typo3temp/assets/compressed/merged-84a0115ee8e3d5a5a0e88db23b58e7b1.js?1751227577"></script>
+		<script src="/typo3temp/assets/compressed/merged-917ec37b6a79cc355bbe5dec4c4168df.js?1751227577"></script>
+		<script src="/typo3conf/ext/inv_ul_sitepackage/Resources/Public/JavaScript/migam.js?1734508523" async="async"></script>
+		<script>
+/*<![CDATA[*/
+/*logoutTimeout*/
+            //var logoutTimeout = 60000;
+            var logoutUrl = "/en/mobility?logout";
+/*TS_inlineJS*/
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-1MY3DVGPWR');
+/*]]>*/
+</script>
+		 </body>
+	 </html>

@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'markdownx',
     'core',
-    'universities',
     'support',
     'services',
     'blog',
@@ -168,6 +167,15 @@ MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'
 MARKDOWNX_UPLOAD_FILE_PATH = 'markdownx/'
 MARKDOWNX_EDITOR_RESIZABLE = True
 
-LOGIN_REDIRECT_URL = '/profiles/profile/'
+
+# Email Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'rusiqe@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = ''  # Your Gmail password or App Password
+DEFAULT_FROM_EMAIL = 'rusiqe@gmail.com'
+SERVER_EMAIL = 'rusiqe@gmail.com'
 
 

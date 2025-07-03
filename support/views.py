@@ -195,16 +195,7 @@ class ChatAPIView(View):
 
 def faq_list(request):
     """Display FAQ page"""
-    faqs_by_category = {}
-    faqs = FAQ.objects.filter(is_active=True).order_by('category', 'order')
-    
-    for faq in faqs:
-        category = faq.get_category_display()
-        if category not in faqs_by_category:
-            faqs_by_category[category] = []
-        faqs_by_category[category].append(faq)
-    
-    return render(request, 'support/faq.html', {'faqs_by_category': faqs_by_category})
+    return render(request, 'support/faq.html')
 
 def contact_form(request):
     """Display and handle contact form"""

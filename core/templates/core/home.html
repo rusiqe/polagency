@@ -16,10 +16,6 @@
                         <i class="fas fa-rocket me-2"></i>
                         Get Started
                     </a>
-                    <a href="{% url 'universities:university_list' %}" class="btn btn-outline-light btn-lg">
-                        <i class="fas fa-university me-2"></i>
-                        Explore Universities
-                    </a>
                 </div>
             </div>
             <div class="col-lg-6 text-center">
@@ -39,13 +35,7 @@
 <!-- Statistics Section -->
 <section class="stats-section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-item">
-                    <span class="stat-number">{{ university_stats.total_universities }}+</span>
-                    <div class="stat-label">Universities</div>
-                </div>
-            </div>
+        <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6">
                 <div class="stat-item">
                     <span class="stat-number">{{ homepage.students_helped }}+</span>
@@ -86,7 +76,6 @@
                     </div>
                     <h4>University Search</h4>
                     <p>Find the perfect university and program that matches your academic goals and preferences from our comprehensive database.</p>
-                    <a href="{% url 'universities:university_list' %}" class="btn btn-outline-primary">Explore Universities</a>
                 </div>
             </div>
             
@@ -249,9 +238,9 @@
                     
                     <div class="testimonial-author">
                         {% if testimonial.photo %}
-                            <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="testimonial-avatar">
+                            <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="testimonial-avatar rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
                         {% else %}
-                            <div class="testimonial-avatar bg-primary d-flex align-items-center justify-content-center text-white">
+                            <div class="testimonial-avatar bg-primary d-flex align-items-center justify-content-center text-white rounded-circle" style="width: 60px; height: 60px;">
                                 {{ testimonial.name|first }}
                             </div>
                         {% endif %}
